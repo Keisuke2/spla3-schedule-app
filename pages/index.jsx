@@ -11,7 +11,7 @@ import EventSchedule from '../components/Event';
 import FestSchedule from '../components/Fest';
 import SRunSchedule from '../components/SalmonRun';
 
-export default function Home({ schedule, fest_ch_schedule, salmonSchedule }) {
+export default function Home({ sch, festOpSch, salmonSch }) {
   return (
     <div className={styles.container}>
       <Head prefix='og:http://ogp.me/ns#'>
@@ -46,33 +46,32 @@ export default function Home({ schedule, fest_ch_schedule, salmonSchedule }) {
           <TabPanels>
             <TabPanel>
               <div className='flex'>
-                <RegularSchedule schedule={schedule} maxDisplayedItems={5}></RegularSchedule>
+                <RegularSchedule sch={sch} maxDisplayedItems={5}></RegularSchedule>
               </div>
             </TabPanel>
             <TabPanel>
               <div className='flex'>
-                <BankaraSchedule schedule={schedule} maxDisplayedItems={5}></BankaraSchedule>
+                <BankaraSchedule sch={sch} maxDisplayedItems={5}></BankaraSchedule>
               </div>
             </TabPanel>
             <TabPanel>
               <div className='flex'>
-                <XSchedule schedule={schedule} maxDisplayedItems={5}></XSchedule>
+                <XSchedule sch={sch} maxDisplayedItems={5}></XSchedule>
               </div>
             </TabPanel>
             <TabPanel>
               <div className='flex'>
-                <EventSchedule schedule={schedule}></EventSchedule>
+                <EventSchedule sch={sch}></EventSchedule>
               </div>
             </TabPanel>
             <TabPanel>
               <div className='flex'>
-                <FestSchedule schedule={schedule} maxDisplayedItems={5}></FestSchedule>
-                {/* <FestSchedule fest_ch_schedule={fest_ch_schedule}></FestSchedule> */}
+                <FestSchedule sch={sch} festOpSch={festOpSch} maxDisplayedItems={5}></FestSchedule>
               </div>
             </TabPanel>
             <TabPanel>
               <div className='flex'>
-                <SRunSchedule salmonSchedule={salmonSchedule}></SRunSchedule>
+                <SRunSchedule salmonSch={salmonSch}></SRunSchedule>
               </div>
             </TabPanel>
           </TabPanels>
@@ -95,26 +94,26 @@ export const getStaticProps = async () => {
     },
   });
   const res = await fetch(req)
-  const schedule = await res.json()
+  const sch = await res.json()
 
-  // Schedule of "fest-open" includes in schedule(json)
-  const fest_ch_req = new Request("https://spla3.yuu26.com/api/fest-challenge/schedule", {
+  // Schedule of "fest-open" includes in sch(json)
+  const festOpReq = new Request("https://spla3.yuu26.com/api/fest/schedule", {
     headers: {
       "user-agent": "Spla3/1.0(inokei1704@gmail.com)",
     },
   });
-  const fest_ch_res = await fetch(fest_ch_req)
-  const fest_ch_schedule = await fest_ch_res.json()
+  const festOpRes = await fetch(festOpReq)
+  const festOpSch = await festOpRes.json()
 
-  const salmon_req = new Request("https://spla3.yuu26.com/api/coop-grouping/schedule", {
+  const salmonReq = new Request("https://spla3.yuu26.com/api/coop-grouping/schedule", {
     headers: {
       "user-agent": "Spla3/1.0(inokei1704@gmail.com)",
     },
   });
-  const salmon_res = await fetch(salmon_req)
-  const salmonSchedule = await salmon_res.json()
+  const salmonRes = await fetch(salmonReq)
+  const salmonSch = await salmonRes.json()
 
   return {
-    props: { schedule, fest_ch_schedule, salmonSchedule },
+    props: { sch, festOpSch, salmonSch },
   }
 }
