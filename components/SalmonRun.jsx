@@ -1,11 +1,11 @@
 import { FormatDate } from "../pages/utils"
 import styles from '../styles/Home.module.css';
 
-export default function SRunSchedule({ salmonSchedule }) {
+export default function SRunSchedule({ salmonSch }) {
     return (
         <div className={styles.schedules}>
             {(() => {
-                return salmonSchedule.results.map((item, index) => {
+                return salmonSch.results.map((item, index) => {
                     return (
                         <div key={index} className={styles.schedule}>
                             <p className={styles.time}>{FormatDate(item.start_time, item.end_time)}</p>
