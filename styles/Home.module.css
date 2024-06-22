@@ -1,3 +1,19 @@
+/* For Index */
+.tab {
+  background-color: transparent;
+  /* 背景色を透明に設定 */
+  border: 3px solid #86F9C5;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* For Regular, Bankara, X, Event, Fest, SalmonRun */
+.noSchMsg {
+  color: tomato;
+}
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -36,6 +52,61 @@
 
 .time {
   color: #000000;
+  /* margin-block-start: 0em;
+  margin-block-end: 0em; */
+  /* margin-inline-start: 0px;
+  margin-inline-end: 0px; */
+  /* unicode-bidi: isolate; */
+}
+
+.rule {
+  margin: 0 1em;
+  color: orange;
+}
+
+.stageSetList {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.stageList {
+  color: #000000;
+  margin: 0;
+  padding: 0 1em;
+  list-style: none;
+}
+
+.stageList>p {
+  margin: 0;
+}
+
+.stageName {
+  color: #000000;
+  margin: 0 1em;
+}
+
+.stageImage {
+  width: 250px;
+  height: 125px;
+}
+
+/* For Bankara, Fest */
+.mode {
+  margin: 0 1em;
+}
+
+.modeAndRule {
+  display: flex;
+  justify-content: center;
+}
+
+/* For Event */
+
+.eventHeader {
+  margin-top: 10px;
 }
 
 .timeList {
@@ -47,39 +118,12 @@
   border-radius: 10px;
 }
 
-.rule {
-  margin-bottom: 0%;
-}
-
-.stageSetList {
-  margin-top: 0%;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-.stageList {
-  color: #000000;
-  padding: 0 1em;
-  list-style: none;
-}
-
-.stageName {
-  color: #000000;
-}
-
-.stageImage {
-  width: 250px;
-  height: 125px;
-}
-
+/* For SalmonRun */
 .stageAndBoss {
   display: flex;
   justify-content: center;
 }
 
-.stageName,
 .bossName {
   margin: 0 1em;
 }
@@ -102,23 +146,9 @@
 }
 
 .weaponImage {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background-color: #FFFFBB;
   border: 3px solid #86F9C5;
   border-radius: 10px;
-}
-
-.eventHeader {
-  margin-top: 10px;
-}
-
-.tab {
-  background-color: transparent;
-  /* 背景色を透明に設定 */
-  border: 3px solid #86F9C5;
-  border-radius: 10px;
-  padding: 10px;
-  cursor: pointer;
-  text-align: center;
 }
