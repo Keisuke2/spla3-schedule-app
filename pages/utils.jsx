@@ -1,5 +1,4 @@
-
-
+// 日付と時間を整形する関数
 export function FormatDate(startTime, endTime) {
     const start = new Date(startTime);
     const end = new Date(endTime);
@@ -9,14 +8,20 @@ export function FormatDate(startTime, endTime) {
     let formattedStartTime = '';
     let formattedEndTime = '';
 
-    // 年と日が同じ場合
     if (start.getFullYear() === end.getFullYear() && start.getMonth() === end.getMonth() && startDate === endDate) {
+        // 年と日が同じ場合（同じ日付）
+        // startTime: 2024-06-22T17:00:00+09:00、endTime: 2024-06-22T19:00:00+09:00 -> return 6/22 17:00 - 19:00
         formattedStartTime = `${start.getMonth() + 1}/${startDate} ${start.getHours()}:${String(start.getMinutes()).padStart(2, '0')}`;
         formattedEndTime = `${end.getHours()}:${String(end.getMinutes()).padStart(2, '0')}`;
-    } else if (start.getFullYear() === end.getFullYear()) {
+    }
+    else if (start.getFullYear() === end.getFullYear()) {
+        // 年は同じだが、日が違う場合
+        // startTime: 2024-06-22T23:00:00+09:00、endTime: 2024-06-23T01:00:00+09:00 -> return 6/22 23:00 - 6/23 1:00
         formattedStartTime = `${start.getMonth() + 1}/${startDate} ${start.getHours()}:${String(start.getMinutes()).padStart(2, '0')}`;
         formattedEndTime = `${end.getMonth() + 1}/${endDate} ${end.getHours()}:${String(end.getMinutes()).padStart(2, '0')}`;
     } else {
+        // 年も日も違う場合
+        // startTime: 2024-12-31T23:00:00+09:00、endTime: 2025-01-01T01:00:00+09:00 -> return 2024/12/31 23:00 - 2025/1/1 1:00
         formattedStartTime = `${start.getFullYear()}/${start.getMonth() + 1}/${startDate} ${start.getHours()}:${String(start.getMinutes()).padStart(2, '0')}`;
         formattedEndTime = `${end.getFullYear()}/${end.getMonth() + 1}/${endDate} ${end.getHours()}:${String(end.getMinutes()).padStart(2, '0')}`;
     }
@@ -24,32 +29,38 @@ export function FormatDate(startTime, endTime) {
     return `${formattedStartTime} - ${formattedEndTime}`;
 }
 
-function isPast(start_time) {
+// startTime と endTime が過去の場合
+function isPast(startTime, endTime) {
     const now = new Date();
-    const startTime = new Date(start_time);
-    return startTime <= now;
+    const ednDate = new Date(startTime)
+    const endDate = new Date(endTime);
+    return ednDate < now && endDate < now;
 }
 
-function isCurrentTimeBetween(start_time, end_time) {
+// startTimeが過去であり、endTime が未来の場合
+function isCurrentTimeBetween(startTime, endTime) {
     const now = new Date();
-    const startTime = new Date(start_time);
-    const endTime = new Date(end_time);
-    return now >= startTime && now <= endTime;
+    const startDate = new Date(startTime);
+    const endDate = new Date(endTime);
+    return now >= startDate && now <= endDate;
 }
 
-function isFuture(start_time, end_time) {
+// startTime と endTime が未来の場合
+function isFuture(startTime, endTime) {
     const now = new Date();
-    const startTime = new Date(start_time);
-    const endTime = new Date(end_time);
-    return startTime > now && endTime > now;
+    const startDate = new Date(startTime);
+    const endDate = new Date(endTime);
+    return startDate > now && endDate > now;
 }
 
-export function FilterAndDisplayData(jsonData, maxDisplayedItems) {
+// 受け取ったデータをいくつ返すか決め、その分のデータを返す関数
+// 過去のデータは返さないようにする
+export function FilterData(jsonData, maxDisplayedItems) {
     let displayedItems = 0;
     const filteredData = [];
 
     jsonData.forEach((item) => {
-        if (isPast(item.start_time) && !isCurrentTimeBetween(item.start_time, item.end_time)) {
+        if (isPast(item.start_time, item.end_time) && !isCurrentTimeBetween(item.start_time, item.end_time)) {
             return;
         } else if (isCurrentTimeBetween(item.start_time, item.end_time)) {
             filteredData.push(item);
