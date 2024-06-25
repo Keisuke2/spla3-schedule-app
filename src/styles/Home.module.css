@@ -1,0 +1,227 @@
+/* Container */
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  text-align: center;
+  background-color: #121212;
+  /* ダークモードの背景色 */
+}
+
+/* Tab Style */
+.tab {
+  background-color: #333;
+  border: 3px solid #666;
+  /* 落ち着いた色に変更 */
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  margin: 10px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.tab:hover {
+  background-color: #555;
+  /* ホバー時の背景色を調整 */
+  color: #fff;
+  /* ホバー時の文字色を調整 */
+  border-color: #999;
+  /* ホバー時の境界線色を調整 */
+}
+
+/* No Schedule Message */
+.noSchMsg {
+  color: #ff8a65;
+  /* 落ち着いたトマト色 */
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+/* Schedules Container */
+.schedules {
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 80%;
+  background-color: #121212;
+  /* ダークモードの背景色 */
+}
+
+@media (max-width: 768px) {
+  .schedules {
+    width: 95%;
+  }
+}
+
+/* Schedule Item */
+.schedule {
+  border: 3px solid #4caf50;
+  /* 落ち着いた色に変更 */
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #1e1e1e;
+  /* 落ち着いた背景色 */
+  transition: transform 0.3s;
+  transform: scale(0.8);
+  /* 小さくする */
+}
+
+.schedule:hover {
+  transform: scale(1.05);
+  /* ホバー時に大きくする */
+}
+
+/* Schedule List */
+.schedule>ul {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Time Style */
+.time {
+  color: #90caf9;
+  /* 落ち着いたブルー */
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* Rule Style */
+.rule {
+  margin: 0 1em;
+  color: #ff7043;
+  /* 落ち着いたオレンジ */
+  font-weight: bold;
+}
+
+/* Stage Set List */
+.stageSetList {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Stage List */
+.stageList {
+  color: #e0e0e0;
+  margin: 10px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  flex: 1 0 45%;
+  max-width: 45%;
+}
+
+@media (max-width: 768px) {
+  .stageList {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Stage Name */
+.stageName {
+  color: #90caf9;
+  /* 落ち着いたブルー */
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
+/* Stage Image */
+.stageImage {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+/* Mode and Rule for Bankara and Fest */
+.mode {
+  margin: 0 1em;
+  font-weight: bold;
+  color: #90caf9;
+  /* 落ち着いたブルー */
+}
+
+.modeAndRule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Event Header */
+.eventHeader {
+  margin-top: 10px;
+}
+
+.eventName {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #90caf9;
+  /* 落ち着いたブルー */
+}
+
+.eventDesc {
+  font-size: 1em;
+  margin-bottom: 5px;
+  color: #81d4fa;
+  /* 落ち着いたライトブルー */
+}
+
+.timeList {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Stage and Boss for SalmonRun */
+.stageAndBoss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bossName {
+  margin: 0 1em;
+  font-weight: bold;
+  color: #ff8a65;
+  /* 落ち着いたトマト色 */
+}
+
+.weaponSetList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.weaponList {
+  color: #e0e0e0;
+  list-style: none;
+  margin: 10px;
+  text-align: center;
+}
+
+.weaponName {
+  color: #81d4fa;
+  /* 落ち着いたライトブルー */
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.weaponImage {
+  width: 60px;
+  height: 60px;
+  background-color: #333;
+  border: 3px solid #4caf50;
+  /* 落ち着いた色に変更 */
+  border-radius: 10px;
+  margin: 5px auto;
+}
