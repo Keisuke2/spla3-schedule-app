@@ -19,13 +19,13 @@ export default function FestSchedule({ sch, festOpSch, maxDisplayedItems }) {
         filteredFestOpSch.some(item => item.is_fest);
 
     return (
-        <div className={styles.schedules}>
+        <div className={styles.scheduleContainer}>
             {isFestSchAvailable ? (
                 // 表示するフェスのスケールがある場合（数時間後にフェスが開催されるなど、フェスのスケジュールを取得できる場合）
                 filteredFestChSch.map((item, index) => (
                     item.is_fest ? (
                         // 同じ時間帯に開催されるチャレンジとオープンのスケジュールをまとめて表示する
-                        <div key={index} className={styles.schedule}>
+                        <div key={index} className={styles.scheduleItem}>
                             <MergeChAndOp sch={item} mode="チャレンジ" isTimeDisplayed={true} />
                             <MergeChAndOp sch={filteredFestOpSch[index]} mode="オープン" isTimeDisplayed={false} />
                         </div>
@@ -42,21 +42,23 @@ export default function FestSchedule({ sch, festOpSch, maxDisplayedItems }) {
 // 同じ時間帯に開催されるチャレンジとオープンのスケジュールをまとめて表示するための関数
 const MergeChAndOp = ({ sch, mode, isTimeDisplayed }) => {
     return (
-        <>
-            {isTimeDisplayed && (
-                <p className={styles.time}>
-                    {formatDate(sch.start_time, sch.end_time)}
-                </p>
-            )}
-            <p className={styles.mode}>{mode}</p>
-            <ul className={styles.stageSetList}>
+        <div className={styles.scheduleContent}>
+            <div className={styles.scheduleInfo}>
+                {isTimeDisplayed && (
+                    <p className={styles.time}>
+                        {formatDate(sch.start_time, sch.end_time)}
+                    </p>
+                )}
+                <p className={styles.mode}>{mode}</p>
+            </div>
+            <ul className={styles.stageContainer}>
                 {sch.stages.map((stage) => (
-                    <li key={stage.id} className={styles.stageList}>
+                    <li key={stage.id} className={styles.stageItem}>
                         <p className={styles.textStage}>{stage.name}</p>
-                        <img src={stage.image} alt="ステージの画像" className={styles.stageImage} />
+                        <img src={stage.image} alt={stage.name} className={styles.stageImage} />
                     </li>
                 ))}
             </ul>
-        </>
+        </div>
     );
 };

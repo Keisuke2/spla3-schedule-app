@@ -14,7 +14,6 @@
   transition: all 0.3s ease;
   font-weight: 600;
   color: #e0e0e0;
-  /* テキストカラーを明るく設定 */
 }
 
 .tab:hover {
@@ -22,120 +21,133 @@
   border-color: #4caf50;
 }
 
-/* 選択されているタブのスタイル */
 .tab.active {
   background-color: #4caf50;
   border-color: #4caf50;
   color: #ffffff;
 }
 
-/* アイコンのスタイル調整 */
 .tab img {
   width: 24px;
   height: 24px;
-  margin-right: 8px;
   vertical-align: middle;
 }
 
-.noSchMsg {
-  color: #ff8a65;
-  font-size: 1.2em;
-  margin-top: 2rem;
-  padding: 1rem;
-  background-color: rgba(255, 138, 101, 0.1);
-  border-radius: 8px;
-}
-
-.schedules {
-  padding: 2rem 0;
-  margin: 0 auto;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.schedule {
-  border: 2px solid #333;
-  border-radius: 12px;
-  padding: 1.5rem;
-  background-color: #1e1e1e;
-  transition: all 0.3s ease;
+.scheduleContainer {
   display: flex;
   flex-direction: column;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.schedule:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.scheduleItem {
+  display: flex;
+  flex-direction: column;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.schedule>ul {
-  margin: 1em 0;
-  padding: 0;
-  list-style: none;
+.scheduleContent {
+  display: flex;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.scheduleContent:last-child {
+  border-bottom: none;
+}
+
+.scheduleInfo {
+  flex: 0 0 35%;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .time {
-  color: #90caf9;
+  font-size: 0.9em;
   font-weight: bold;
-  font-size: 1.1em;
-  margin-bottom: 1rem;
+  color: #4caf50;
+  margin-bottom: 4px;
+}
+
+.mode {
+  font-size: 1em;
+  color: #90caf9;
+  margin-bottom: 4px;
 }
 
 .rule {
-  color: #ff7043;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-size: 0.8em;
+  color: #ff9800;
 }
 
-.stageSetList {
+.stageContainer {
+  flex: 1;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
-  gap: 1rem;
+  padding: 12px;
 }
 
-.stageList {
-  flex: 1 1 45%;
-  min-width: 200px;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  list-style-type: none;
-  /* リストマーカーを削除 */
-  /* padding-left: 0; */
-  /* 左のパディングを削除 */
+.stageItem {
+  text-align: center;
+  width: 45%;
 }
 
 .stageName {
-  color: #90caf9;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
+  font-size: 0.8em;
+  color: #e0e0e0;
 }
 
 .stageImage {
   width: 100%;
-  max-width: 200px;
-  border-radius: 8px;
-  margin: 0.5rem auto;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 4px;
 }
 
-.mode {
-  font-weight: bold;
-  color: #90caf9;
-  margin-bottom: 0.5rem;
+.bossName {
+  font-size: 0.9em;
+  color: #ff9800;
 }
 
-.modeAndRule {
+.weaponContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.weaponItem {
+  width: 48px;
+  height: 48px;
+}
+
+.weaponImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #3a3a3a;
+  border-radius: 4px;
+}
+
+.weaponName {
+  color: #81d4fa;
+  font-size: 0.9em;
+  margin-top: 0.5rem;
+}
+
+.timeList {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.eventHeader {
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -151,66 +163,26 @@
   color: #81d4fa;
 }
 
-.timeList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.stageAndBoss {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.bossName {
-  font-weight: bold;
-  color: #ff8a65;
-}
-
-.weaponSetList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.weaponList {
+.noSchMsg {
   text-align: center;
-}
-
-.weaponName {
-  color: #81d4fa;
-  font-size: 0.9em;
-  margin-top: 0.5rem;
-}
-
-.weaponImage {
-  width: 50px;
-  height: 50px;
-  background-color: #333;
-  border: 2px solid #4caf50;
+  padding: 16px;
+  color: #ff8a65;
+  background-color: #2a2a2a;
   border-radius: 8px;
-  padding: 5px;
+  font-size: 0.9em;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 1rem;
+@media (max-width: 480px) {
+  .scheduleItem {
+    flex-direction: column;
   }
 
-  .schedules {
-    grid-template-columns: 1fr;
+  .scheduleInfo {
+    flex: 0 0 auto;
+    padding: 8px;
   }
 
-  .stageList {
-    flex: 1 1 100%;
+  .stageContainer {
+    padding: 8px;
   }
 }
