@@ -1,227 +1,216 @@
-/* Container */
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
-  text-align: center;
+  padding: 2rem;
   background-color: #121212;
-  /* ダークモードの背景色 */
 }
 
-/* Tab Style */
 .tab {
-  background-color: #333;
-  border: 3px solid #666;
-  /* 落ち着いた色に変更 */
-  border-radius: 10px;
-  padding: 10px;
+  background-color: #1e1e1e;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 12px 20px;
   cursor: pointer;
-  text-align: center;
   margin: 10px;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  color: #e0e0e0;
+  /* テキストカラーを明るく設定 */
 }
 
 .tab:hover {
-  background-color: #555;
-  /* ホバー時の背景色を調整 */
-  color: #fff;
-  /* ホバー時の文字色を調整 */
-  border-color: #999;
-  /* ホバー時の境界線色を調整 */
+  background-color: #333;
+  border-color: #4caf50;
 }
 
-/* No Schedule Message */
+/* 選択されているタブのスタイル */
+.tab.active {
+  background-color: #4caf50;
+  border-color: #4caf50;
+  color: #ffffff;
+}
+
+/* アイコンのスタイル調整 */
+.tab img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 .noSchMsg {
   color: #ff8a65;
-  /* 落ち着いたトマト色 */
   font-size: 1.2em;
-  margin-top: 20px;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgba(255, 138, 101, 0.1);
+  border-radius: 8px;
 }
 
-/* Schedules Container */
 .schedules {
-  padding: 20px 0;
+  padding: 2rem 0;
   margin: 0 auto;
-  width: 80%;
-  background-color: #121212;
-  /* ダークモードの背景色 */
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-@media (max-width: 768px) {
-  .schedules {
-    width: 95%;
-  }
-}
-
-/* Schedule Item */
 .schedule {
-  border: 3px solid #4caf50;
-  /* 落ち着いた色に変更 */
-  border-radius: 20px;
-  margin-bottom: 20px;
-  padding: 15px;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
   background-color: #1e1e1e;
-  /* 落ち着いた背景色 */
-  transition: transform 0.3s;
-  transform: scale(0.8);
-  /* 小さくする */
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .schedule:hover {
-  transform: scale(1.05);
-  /* ホバー時に大きくする */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Schedule List */
 .schedule>ul {
   margin: 1em 0;
   padding: 0;
   list-style: none;
 }
 
-/* Time Style */
 .time {
   color: #90caf9;
-  /* 落ち着いたブルー */
   font-weight: bold;
-  margin: 5px 0;
+  font-size: 1.1em;
+  margin-bottom: 1rem;
 }
 
-/* Rule Style */
 .rule {
-  margin: 0 1em;
   color: #ff7043;
-  /* 落ち着いたオレンジ */
   font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
-/* Stage Set List */
 .stageSetList {
-  margin-top: 0;
-  padding: 0;
-  list-style: none;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
 }
 
-/* Stage List */
 .stageList {
-  color: #e0e0e0;
-  margin: 10px;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-  flex: 1 0 45%;
-  max-width: 45%;
+  flex: 1 1 45%;
+  min-width: 200px;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  list-style-type: none;
+  /* リストマーカーを削除 */
+  /* padding-left: 0; */
+  /* 左のパディングを削除 */
 }
 
-@media (max-width: 768px) {
-  .stageList {
-    flex: 1 0 100%;
-    max-width: 100%;
-  }
-}
-
-/* Stage Name */
 .stageName {
   color: #90caf9;
-  /* 落ち着いたブルー */
-  margin: 0.5em 0;
+  margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
-/* Stage Image */
 .stageImage {
   width: 100%;
-  max-width: 250px;
-  height: auto;
-  border-radius: 10px;
-  margin: 10px auto;
+  max-width: 200px;
+  border-radius: 8px;
+  margin: 0.5rem auto;
 }
 
-/* Mode and Rule for Bankara and Fest */
 .mode {
-  margin: 0 1em;
   font-weight: bold;
   color: #90caf9;
-  /* 落ち着いたブルー */
+  margin-bottom: 0.5rem;
 }
 
 .modeAndRule {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
-/* Event Header */
 .eventHeader {
-  margin-top: 10px;
+  margin-bottom: 1rem;
 }
 
 .eventName {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
   color: #90caf9;
-  /* 落ち着いたブルー */
+  margin-bottom: 0.5rem;
 }
 
 .eventDesc {
-  font-size: 1em;
-  margin-bottom: 5px;
+  font-size: 0.9em;
   color: #81d4fa;
-  /* 落ち着いたライトブルー */
 }
 
 .timeList {
   display: flex;
   flex-direction: column;
-  margin: 10px 0;
-  background-color: #333;
-  border-radius: 10px;
-  padding: 10px;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* Stage and Boss for SalmonRun */
 .stageAndBoss {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .bossName {
-  margin: 0 1em;
   font-weight: bold;
   color: #ff8a65;
-  /* 落ち着いたトマト色 */
 }
 
 .weaponSetList {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .weaponList {
-  color: #e0e0e0;
-  list-style: none;
-  margin: 10px;
   text-align: center;
 }
 
 .weaponName {
   color: #81d4fa;
-  /* 落ち着いたライトブルー */
-  font-size: 12px;
-  margin-top: 5px;
+  font-size: 0.9em;
+  margin-top: 0.5rem;
 }
 
 .weaponImage {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background-color: #333;
-  border: 3px solid #4caf50;
-  /* 落ち着いた色に変更 */
-  border-radius: 10px;
-  margin: 5px auto;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .schedules {
+    grid-template-columns: 1fr;
+  }
+
+  .stageList {
+    flex: 1 1 100%;
+  }
 }
