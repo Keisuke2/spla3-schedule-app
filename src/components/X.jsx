@@ -24,8 +24,8 @@ export default function XSchedule({ sch, maxDisplayedItems }) {
                             <div className={styles.stageContainer}>
                                 {item.stages.map(stage => (
                                     <div key={stage.id} className={styles.stageItem}>
-                                        <p className={styles.stageName}>{stage.name}</p>
                                         <img className={styles.stageImage} src={stage.image} alt={stage.name} />
+                                        <p className={styles.stageName}>{stage.name}</p>
                                     </div>
                                 ))}
                             </div>

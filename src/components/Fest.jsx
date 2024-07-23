@@ -54,8 +54,8 @@ const MergeChAndOp = ({ sch, mode, isTimeDisplayed }) => {
             <ul className={styles.stageContainer}>
                 {sch.stages.map((stage) => (
                     <li key={stage.id} className={styles.stageItem}>
-                        <p className={styles.textStage}>{stage.name}</p>
                         <img src={stage.image} alt={stage.name} className={styles.stageImage} />
+                        <p className={styles.textStage}>{stage.name}</p>
                     </li>
                 ))}
             </ul>

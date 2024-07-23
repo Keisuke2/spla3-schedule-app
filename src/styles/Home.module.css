@@ -1,7 +1,7 @@
 .container {
   min-height: 100vh;
   padding: 2rem;
-  background-color: #121212;
+  background-color: #534e4e;
 }
 
 .tab {
@@ -11,7 +11,7 @@
   padding: 12px 20px;
   cursor: pointer;
   margin: 10px;
-  transition: all 0.3s ease;
+  /* transition: all 0.1s ease; */
   font-weight: 600;
   color: #e0e0e0;
 }
@@ -23,7 +23,7 @@
 
 .tab.active {
   background-color: #4caf50;
-  border-color: #4caf50;
+  border-color: #a2aaa2;
   color: #ffffff;
 }
 
@@ -32,6 +32,9 @@
   height: 24px;
   vertical-align: middle;
 }
+
+
+/* ここかからはスケジュールのスタイルで、変更可能性あり */
 
 .scheduleContainer {
   display: flex;
@@ -43,11 +46,10 @@
 
 .scheduleItem {
   display: flex;
-  flex-direction: column;
-  background-color: #2a2a2a;
+  background-color: #3a3a3a;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .scheduleContent {
@@ -60,38 +62,53 @@
 }
 
 .scheduleInfo {
-  flex: 0 0 35%;
-  background-color: #1a1a1a;
-  color: #e0e0e0;
+  flex: 0 0 30%;
   padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-right: 1px solid #e0e0e0;
+  background-color: #2a2a2a;
 }
 
 .time {
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: bold;
-  color: #4caf50;
-  margin-bottom: 4px;
+  background-color: #4a4a4a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.modeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modeItem {
+  padding: 8px;
+  background-color: #444242;
+  border-radius: 4px;
 }
 
 .mode {
-  font-size: 1em;
-  color: #90caf9;
+  font-size: 0.8em;
   margin-bottom: 4px;
 }
 
 .rule {
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: #ff9800;
+  margin-bottom: 8px;
 }
 
 .stageContainer {
   flex: 1;
   display: flex;
   justify-content: space-around;
-  padding: 12px;
+  align-items: center;
+  padding: 16px;
 }
 
 .stageItem {
@@ -100,16 +117,94 @@
 }
 
 .stageName {
-  font-size: 0.8em;
-  color: #e0e0e0;
+  font-size: 0.9em;
+  margin: 8px 0;
 }
 
 .stageImage {
   width: 100%;
   height: auto;
-  border-radius: 4px;
-  margin-bottom: 4px;
+  border-radius: 8px;
 }
+
+.noSchMsg {
+  text-align: center;
+  padding: 16px;
+  background-color: #434040;
+  border-radius: 8px;
+  font-size: 0.9em;
+}
+
+
+/* バンカラマッチ用のレイアウト */
+
+.bankaraContainer .scheduleItem {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.bankaraContainer .scheduleInfo {
+  flex: 0 0 30%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bankaraContainer .stageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+}
+
+
+/* イベントマッチ用のレイアウト */
+
+.eventContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.eventContainer .scheduleItem {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.eventContainer .scheduleInfo {
+  padding: 16px;
+}
+
+.eventName {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #90caf9;
+  margin-bottom: 8px;
+}
+
+.eventDesc {
+  font-size: 0.9em;
+  color: #e0e0e0;
+  margin-bottom: 8px;
+}
+
+.timeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+
+/* サーモンラン用のレイアウト */
 
 .bossName {
   font-size: 0.9em;
@@ -125,51 +220,40 @@
 .weaponItem {
   width: 48px;
   height: 48px;
+  position: relative;
+}
+
+.weaponItem:hover .weaponImage {
+  border: 2px solid #ff9800;
+  /* カーソルが当たったときの枠線の色 */
+}
+
+.weaponItem:hover .weaponName {
+  display: block;
 }
 
 .weaponImage {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background-color: #3a3a3a;
+  background-color: #585353;
   border-radius: 4px;
+  border: 2px solid transparent;
+  /* 初期状態の枠線を透明に */
 }
 
 .weaponName {
-  color: #81d4fa;
-  font-size: 0.9em;
-  margin-top: 0.5rem;
-}
-
-.timeList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.eventName {
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #90caf9;
-  margin-bottom: 0.5rem;
-}
-
-.eventDesc {
-  font-size: 0.9em;
-  color: #81d4fa;
-}
-
-.noSchMsg {
-  text-align: center;
-  padding: 16px;
-  color: #ff8a65;
-  background-color: #2a2a2a;
-  border-radius: 8px;
-  font-size: 0.9em;
+  display: none;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-70%);
+  font-size: 0.8em;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  white-space: nowrap;
 }
 
 @media (max-width: 480px) {
@@ -178,11 +262,11 @@
   }
 
   .scheduleInfo {
-    flex: 0 0 auto;
-    padding: 8px;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
   }
 
   .stageContainer {
-    padding: 8px;
+    flex-direction: column;
   }
 }
