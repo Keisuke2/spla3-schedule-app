@@ -24,8 +24,8 @@ export default function BankaraSchedule({ sch, maxDisplayedItems }) {
                     filteredBankaraChSch.map((item, index) => (
                         !item.is_fest && (
                             <div key={item.start_time} className={styles.scheduleItem}>
-                                <ScheduleContent sch={item} mode="チャレンジ" isTimeDisplayed={true} />
-                                <ScheduleContent sch={filteredBankaraOpSch[index]} mode="オープン" isTimeDisplayed={false} />
+                                <MergeCh_Op sch={item} mode="チャレンジ" isTimeDisplayed={true} />
+                                <MergeCh_Op sch={filteredBankaraOpSch[index]} mode="オープン" isTimeDisplayed={false} />
                             </div>
                         )
                     ))
@@ -35,7 +35,7 @@ export default function BankaraSchedule({ sch, maxDisplayedItems }) {
     );
 }
 
-const ScheduleContent = ({ sch, mode, isTimeDisplayed }) => {
+const MergeCh_Op = ({ sch, mode, isTimeDisplayed }) => {
     return (
         <div className={styles.scheduleContent}>
             <div className={styles.scheduleInfo}>
