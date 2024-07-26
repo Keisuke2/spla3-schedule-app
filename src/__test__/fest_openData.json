@@ -1,0 +1,168 @@
+{
+    "results": [
+        {
+            "start_time": "2024-09-25T09:00:00+09:00",
+            "end_time": "2024-09-25T11:00:00+09:00",
+            "rule": {
+                "key": "TURF_WAR",
+                "name": "ナワバリバトル"
+            },
+            "stages": [
+                {
+                    "id": 13,
+                    "name": "海女美術大学",
+                    "image": "https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/40aba8b36a9439e2d670fde5b3478819ea8a94f9e503b9d783248a5716786f35_1.png?Expires=1736467200&Signature=fCAlEq7s7tze408rj4uhd2IqQHDdz19Oz1ay1bfGRv2mhtjLLNDy2MUtjcA3I9l1IxBzc44TUx27nxmI3LfRL~jc0jFBf5qYcMCFFp51Bvx977SZCKk0MLAcFo8Y23gEaA-3waXhng1aIRfdp17sXeG1BBjOpec1aJ38bdi0N10ZKgOL8464VE5mWnGl7dKodhMfmar~bXvg-qKjRgtj3IuZMamalItWAbQV~2HIYAWXUuikPyAOE-oMvUOH7sDfcH-leQYpI6Nx9naKTDWgEFjGfBZVYkWGgHmk6MpcZZEqW9YMMpxrBdNmGGaLq7ZJylh9O1wc~1I7TUCW-xl4mQ__&Key-Pair-Id=KNBS2THMRC385"
+                },
+                {
+                    "id": 17,
+                    "name": "コンブトラック",
+                    "image": "https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/7b3cf118bd9f45d141cd6db0ee75b06e697fa83945c7fe1e6f8483de6a591f5f_1.png?Expires=1736467200&Signature=VcFhGtCf~KlHgukh~YvktaujxYVpqjl-OgBd~c~hvWDQtzQTWsZJHdtY9L15x0Kq~4Yt5lkAbu8Y4h8jt~OQ75eRXTDkpyxKqD8e7yq~V1EXflUirec0xWrneRjtjtEmOwbiB7agezdL5oUQWJV3d3I5evYhAldBCXi7zVx9Yrm37TUgnN4rIhnCHWEDoSNTj9kFI8mPImAgK8b2Qzr84iin~BA7F9t~hLQ8IuvWuHzoKnQ1WttOraJkOvUvI39M6yqpBEDFXhkDahf92Ek7thcVAdsiY0bZDCXIOQSjx1Cw25IN5TuRq~c6V-NjJ1yCYz4KpLdteGwrc4yxsrLMIw__&Key-Pair-Id=KNBS2THMRC385"
+                }
+            ],
+            "is_fest": true,
+            "is_tricolor": false,
+            "tricolor_stage": null
+        },
+        {
+            "start_time": "2024-09-25T11:00:00+09:00",
+            "end_time": "2024-09-25T13:00:00+09:00",
+            "rule": {
+                "key": "TURF_WAR",
+                "name": "ナワバリバトル"
+            },
+            "stages": [
+                {
+                    "id": 13,
+                    "name": "海女美術大学",
+                    "image": "https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/40aba8b36a9439e2d670fde5b3478819ea8a94f9e503b9d783248a5716786f35_1.png?Expires=1736467200&Signature=fCAlEq7s7tze408rj4uhd2IqQHDdz19Oz1ay1bfGRv2mhtjLLNDy2MUtjcA3I9l1IxBzc44TUx27nxmI3LfRL~jc0jFBf5qYcMCFFp51Bvx977SZCKk0MLAcFo8Y23gEaA-3waXhng1aIRfdp17sXeG1BBjOpec1aJ38bdi0N10ZKgOL8464VE5mWnGl7dKodhMfmar~bXvg-qKjRgtj3IuZMamalItWAbQV~2HIYAWXUuikPyAOE-oMvUOH7sDfcH-leQYpI6Nx9naKTDWgEFjGfBZVYkWGgHmk6MpcZZEqW9YMMpxrBdNmGGaLq7ZJylh9O1wc~1I7TUCW-xl4mQ__&Key-Pair-Id=KNBS2THMRC385"
+                },
+                {
+                    "id": 17,
+                    "name": "コンブトラック",
+                    "image": "https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/7b3cf118bd9f45d141cd6db0ee75b06e697fa83945c7fe1e6f8483de6a591f5f_1.png?Expires=1736467200&Signature=VcFhGtCf~KlHgukh~YvktaujxYVpqjl-OgBd~c~hvWDQtzQTWsZJHdtY9L15x0Kq~4Yt5lkAbu8Y4h8jt~OQ75eRXTDkpyxKqD8e7yq~V1EXflUirec0xWrneRjtjtEmOwbiB7agezdL5oUQWJV3d3I5evYhAldBCXi7zVx9Yrm37TUgnN4rIhnCHWEDoSNTj9kFI8mPImAgK8b2Qzr84iin~BA7F9t~hLQ8IuvWuHzoKnQ1WttOraJkOvUvI39M6yqpBEDFXhkDahf92Ek7thcVAdsiY0bZDCXIOQSjx1Cw25IN5TuRq~c6V-NjJ1yCYz4KpLdteGwrc4yxsrLMIw__&Key-Pair-Id=KNBS2THMRC385"
+                }
+            ],
+            "is_fest": true,
+            "is_tricolor": false,
+            "tricolor_stage": null
+        },
+        {
+            "start_time": "2022-09-25T09:00:00+09:00",
+            "end_time": "2022-09-25T11:00:00+09:00",
+            "rule": {
+                "key": "TURF_WAR",
+                "name": "ナワバリバトル"
+            },
+            "stages": [
+                {
+                    "id": 13,
+                    "name": "海女美術大学",
+                    "image": "https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/40aba8b36a9439e2d670fde5b3478819ea8a94f9e503b9d783248a5716786f35_1.png?Expires=1736467200&Signature=fCAlEq7s7tze408rj4uhd2IqQHDdz19Oz1ay1bfGRv2mhtjLLNDy2MUtjcA3I9l1IxBzc44TUx27nxmI3LfRL~jc0jFBf5qYcMCFFp51Bvx977SZCKk0MLAcFo8Y23gEaA-3waXhng1aIRfdp17sXeG1BBjOpec1aJ38bdi0N10ZKgOL8464VE5mWnGl7dKodhMfmar~bXvg-qKjRgtj3IuZMamalItWAbQV~2HIYAWXUuikPyAOE-oMvUOH7sDfcH-leQYpI6Nx9naKTDWgEFjGfBZVYkWGgHmk6MpcZZEqW9YMMpxrBdNmGGaLq7ZJylh9O1wc~1I7TUCW-xl4mQ__&Key-Pair-Id=KNBS2THMRC385"
+                },
+                {
+                    "id": 17,
+                    "name": "コンブトラック",
+                    "image": "https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/7b3cf118bd9f45d141cd6db0ee75b06e697fa83945c7fe1e6f8483de6a591f5f_1.png?Expires=1736467200&Signature=VcFhGtCf~KlHgukh~YvktaujxYVpqjl-OgBd~c~hvWDQtzQTWsZJHdtY9L15x0Kq~4Yt5lkAbu8Y4h8jt~OQ75eRXTDkpyxKqD8e7yq~V1EXflUirec0xWrneRjtjtEmOwbiB7agezdL5oUQWJV3d3I5evYhAldBCXi7zVx9Yrm37TUgnN4rIhnCHWEDoSNTj9kFI8mPImAgK8b2Qzr84iin~BA7F9t~hLQ8IuvWuHzoKnQ1WttOraJkOvUvI39M6yqpBEDFXhkDahf92Ek7thcVAdsiY0bZDCXIOQSjx1Cw25IN5TuRq~c6V-NjJ1yCYz4KpLdteGwrc4yxsrLMIw__&Key-Pair-Id=KNBS2THMRC385"
+                }
+            ],
+            "is_fest": true,
+            "is_tricolor": false,
+            "tricolor_stage": null
+        },
+        {
+            "start_time": "2022-09-25T09:00:00+09:00",
+            "end_time": "2022-09-25T11:00:00+09:00",
+            "rule": {
+                "key": "TURF_WAR",
+                "name": "ナワバリバトル"
+            },
+            "stages": [
+                {
+                    "id": 13,
+                    "name": "海女美術大学",
+                    "image": "https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/40aba8b36a9439e2d670fde5b3478819ea8a94f9e503b9d783248a5716786f35_1.png?Expires=1736467200&Signature=fCAlEq7s7tze408rj4uhd2IqQHDdz19Oz1ay1bfGRv2mhtjLLNDy2MUtjcA3I9l1IxBzc44TUx27nxmI3LfRL~jc0jFBf5qYcMCFFp51Bvx977SZCKk0MLAcFo8Y23gEaA-3waXhng1aIRfdp17sXeG1BBjOpec1aJ38bdi0N10ZKgOL8464VE5mWnGl7dKodhMfmar~bXvg-qKjRgtj3IuZMamalItWAbQV~2HIYAWXUuikPyAOE-oMvUOH7sDfcH-leQYpI6Nx9naKTDWgEFjGfBZVYkWGgHmk6MpcZZEqW9YMMpxrBdNmGGaLq7ZJylh9O1wc~1I7TUCW-xl4mQ__&Key-Pair-Id=KNBS2THMRC385"
+                },
+                {
+                    "id": 17,
+                    "name": "コンブトラック",
+                    "image": "https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/7b3cf118bd9f45d141cd6db0ee75b06e697fa83945c7fe1e6f8483de6a591f5f_1.png?Expires=1736467200&Signature=VcFhGtCf~KlHgukh~YvktaujxYVpqjl-OgBd~c~hvWDQtzQTWsZJHdtY9L15x0Kq~4Yt5lkAbu8Y4h8jt~OQ75eRXTDkpyxKqD8e7yq~V1EXflUirec0xWrneRjtjtEmOwbiB7agezdL5oUQWJV3d3I5evYhAldBCXi7zVx9Yrm37TUgnN4rIhnCHWEDoSNTj9kFI8mPImAgK8b2Qzr84iin~BA7F9t~hLQ8IuvWuHzoKnQ1WttOraJkOvUvI39M6yqpBEDFXhkDahf92Ek7thcVAdsiY0bZDCXIOQSjx1Cw25IN5TuRq~c6V-NjJ1yCYz4KpLdteGwrc4yxsrLMIw__&Key-Pair-Id=KNBS2THMRC385"
+                }
+            ],
+            "is_fest": true,
+            "is_tricolor": false,
+            "tricolor_stage": null
+        },
+        {
+            "start_time": "2024-07-27T01:00:00+09:00",
+            "end_time": "2024-07-27T03:00:00+09:00",
+            "rule": null,
+            "stages": null,
+            "is_fest": false,
+            "is_tricolor": false,
+            "tricolor_stage": null
+        },
+        {
+            "start_time": "2024-07-27T03:00:00+09:00",
+            "end_time": "2024-07-27T05:00:00+09:00",
+            "rule": null,
+            "stages": null,
+            "is_fest": false,
+            "is_tricolor": false,
+            "tricolor_stage": null
+        },
+        {
+            "start_time": "2024-07-27T05:00:00+09:00",
+            "end_time": "2024-07-27T07:00:00+09:00",
+            "rule": null,
+            "stages": null,
+            "is_fest": false,
+            "is_tricolor": false,
+            "tricolor_stage": null
+        },
+        {
+            "start_time": "2024-07-27T07:00:00+09:00",
+            "end_time": "2024-07-27T09:00:00+09:00",
+            "rule": null,
+            "stages": null,
+            "is_fest": false,
+            "is_tricolor": false,
+            "tricolor_stage": null
+        },
+        {
+            "start_time": "2024-07-27T09:00:00+09:00",
+            "end_time": "2024-07-27T11:00:00+09:00",
+            "rule": null,
+            "stages": null,
+            "is_fest": false,
+            "is_tricolor": false,
+            "tricolor_stage": null
+        },
+        {
+            "start_time": "2024-07-27T11:00:00+09:00",
+            "end_time": "2024-07-27T13:00:00+09:00",
+            "rule": null,
+            "stages": null,
+            "is_fest": false,
+            "is_tricolor": false,
+            "tricolor_stage": null
+        },
+        {
+            "start_time": "2024-07-27T13:00:00+09:00",
+            "end_time": "2024-07-27T15:00:00+09:00",
+            "rule": null,
+            "stages": null,
+            "is_fest": false,
+            "is_tricolor": false,
+            "tricolor_stage": null
+        },
+        {
+            "start_time": "2024-07-27T15:00:00+09:00",
+            "end_time": "2024-07-27T17:00:00+09:00",
+            "rule": null,
+            "stages": null,
+            "is_fest": false,
+            "is_tricolor": false,
+            "tricolor_stage": null
+        }
+    ]
+}
