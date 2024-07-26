@@ -1,8 +1,12 @@
 import React, { useMemo } from 'react';
-import styles from 'styles/Home.module.css';
-import { formatDate, filterData } from 'pages/utils';
+import { formatDate, filterData } from "utils/util.js";
+import styles from "styles/Home.module.css";
 
 export default function FestSchedule({ sch, festOpSch, maxDisplayedItems }) {
+    if (!sch || !sch.result) {
+        return [];
+    }
+
     const filteredFestChSch = useMemo(() => {
         return filterData(sch.result.fest_challenge, maxDisplayedItems);
     }, [sch, maxDisplayedItems]);
@@ -15,22 +19,24 @@ export default function FestSchedule({ sch, festOpSch, maxDisplayedItems }) {
         filteredFestOpSch.some(item => item.is_fest);
 
     return (
-        <div className={styles.scheduleContainer}>
-            {isFestSchAvailable ? (
-                filteredFestChSch.map((item, index) => (
-                    item.is_fest ? (
-                        <div key={index} className={styles.scheduleItem}>
-                            <MergeCh_Op sch={item} mode="チャレンジ" isTimeDisplayed={true} />
-                            <MergeCh_Op sch={filteredFestOpSch[index]} mode="オープン" isTimeDisplayed={false} />
-                            {item.is_tricolor && (
-                                <TricolorBattle sch={item} />
-                            )}
-                        </div>
-                    ) : null
-                ))
-            ) : (
-                <p className={styles.noSchMsg}>現在フェスは開催されていません</p>
-            )}
+        <div className={styles.festContainer}>
+            <div className={styles.scheduleContainer}>
+                {isFestSchAvailable ? (
+                    filteredFestChSch.map((item, index) => (
+                        item.is_fest ? (
+                            <div key={index} className={styles.scheduleItem}>
+                                <MergeCh_Op sch={item} mode="チャレンジ" isTimeDisplayed={true} />
+                                <MergeCh_Op sch={filteredFestOpSch[index]} mode="オープン" isTimeDisplayed={false} />
+                                {item.is_tricolor && (
+                                    <TricolorBattle sch={item} />
+                                )}
+                            </div>
+                        ) : null
+                    ))
+                ) : (
+                    <p className={styles.noSchMsg}>現在フェスは開催されていません</p>
+                )}
+            </div>
         </div>
     );
 }
@@ -44,32 +50,46 @@ const MergeCh_Op = ({ sch, mode, isTimeDisplayed }) => {
                         {formatDate(sch.start_time, sch.end_time)}
                     </p>
                 )}
-                <p className={styles.mode}>{mode}</p>
+                <div className={styles.modeContainer}>
+                    <div className={styles.modeItem}>
+                        <p className={styles.mode}>{mode}</p>
+                        <p className={styles.rule}>{sch.rule.name}</p>
+                    </div>
+                </div>
             </div>
-            <ul className={styles.stageContainer}>
+            <div className={styles.stageContainer}>
                 {sch.stages.map((stage) => (
-                    <li key={stage.id} className={styles.stageItem}>
-                        <img src={stage.image} alt={stage.name} className={styles.stageImage} />
-                        <p className={styles.textStage}>{stage.name}</p>
-                    </li>
+                    <div key={stage.id} className={styles.stageItem}>
+                        <img className={styles.stageImage} src={stage.image} alt={stage.name} />
+                        <p className={styles.stageName}>{stage.name}</p>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };
 
 const TricolorBattle = ({ sch }) => {
     return (
-        <div className={styles.scheduleContent}>
-            <div className={styles.scheduleInfo}>
-                <p className={styles.mode}>トリカラバトル</p>
+        <div className={styles.tricolor}>
+            <div className={styles.scheduleContent}>
+                <div className={styles.scheduleInfo}>
+                    <div className={styles.modeContainer}>
+                        <div className={styles.modeItem}>
+                            <p className={styles.mode}>トリカラバトル</p>
+                            <p className={styles.rule}>ナワバリバトル</p>
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.stageContainer}>
+                    {sch.tricolor_stage.map((stage) => (
+                        <div key={stage.id} className={styles.stageItem}>
+                            <img className={styles.stageImage} src={stage.image} alt={stage.name} />
+                            <p className={styles.stageName}>{stage.name}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <ul className={styles.stageContainer}>
-                <li className={styles.stageItem}>
-                    <img src={sch.tricolor_stage.image} alt={sch.tricolor_stage.name} className={styles.stageImage} />
-                    <p className={styles.textStage}>{sch.tricolor_stage.name}</p>
-                </li>
-            </ul>
         </div>
     );
 };

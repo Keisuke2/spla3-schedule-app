@@ -1,9 +1,13 @@
-import { useMemo } from 'react';
+import { useMemo } from "react";
+import { formatDate, filterData } from "utils/util.js"
 import styles from 'styles/Home.module.css';
-import { formatDate, filterData } from "pages/utils"
 
 export default function RegularSchedule({ sch, maxDisplayedItems }) {
+
     const filteredRegularSch = useMemo(() => {
+        if (!sch || !sch.result) {
+            return [];
+        }
         return filterData(sch.result.regular, maxDisplayedItems);
     }, [sch, maxDisplayedItems]);
 
@@ -19,7 +23,7 @@ export default function RegularSchedule({ sch, maxDisplayedItems }) {
                         <div key={index} className={styles.scheduleItem}>
                             <div className={styles.scheduleInfo}>
                                 <p className={styles.time}>{formatDate(item.start_time, item.end_time)}</p>
-                                <p className={styles.rule}>ナワバリバトル</p>
+                                <p className={styles.rule}>{item.rule.name}</p>
                             </div>
                             <div className={styles.stageContainer}>
                                 {item.stages.map(stage => (

@@ -1,9 +1,14 @@
-import React from 'react';
-import { useMemo } from 'react';
-import styles from 'styles/Home.module.css';
-import { formatDate, filterData } from 'pages/utils';
+import React from "react";
+import { useMemo } from "react";
+import { formatDate, filterData } from "utils/util.js";
+import styles from "styles/Home.module.css";
 
 export default function BankaraSchedule({ sch, maxDisplayedItems }) {
+
+    if (!sch || !sch.result) {
+        return [];
+    }
+
     const filteredBankaraChSch = useMemo(() => {
         return filterData(sch.result.bankara_challenge, maxDisplayedItems);
     }, [sch, maxDisplayedItems]);
@@ -22,17 +27,15 @@ export default function BankaraSchedule({ sch, maxDisplayedItems }) {
                     <p className={styles.noSchMsg}>フェス開催中のため現在スケジュールはありません</p>
                 ) : (
                     filteredBankaraChSch.map((item, index) => (
-                        !item.is_fest && (
-                            <div key={item.start_time} className={styles.scheduleItem}>
-                                <MergeCh_Op sch={item} mode="チャレンジ" isTimeDisplayed={true} />
-                                <MergeCh_Op sch={filteredBankaraOpSch[index]} mode="オープン" isTimeDisplayed={false} />
-                            </div>
-                        )
+                        <div key={item.start_time} className={styles.scheduleItem}>
+                            <MergeCh_Op sch={item} mode="チャレンジ" isTimeDisplayed={true} />
+                            <MergeCh_Op sch={filteredBankaraOpSch[index]} mode="オープン" isTimeDisplayed={false} />
+                        </div>
                     ))
                 )}
             </div>
         </div>
-    );
+    )
 }
 
 const MergeCh_Op = ({ sch, mode, isTimeDisplayed }) => {
@@ -51,15 +54,14 @@ const MergeCh_Op = ({ sch, mode, isTimeDisplayed }) => {
                     </div>
                 </div>
             </div>
-
             <div className={styles.stageContainer}>
                 {sch.stages.map((stage) => (
                     <div key={stage.id} className={styles.stageItem}>
-                        <img src={stage.image} alt={stage.name} className={styles.stageImage} />
+                        <img className={styles.stageImage} src={stage.image} alt={stage.name} />
                         <p className={styles.stageName}>{stage.name}</p>
                     </div>
                 ))}
             </div>
         </div>
     );
-};
+}

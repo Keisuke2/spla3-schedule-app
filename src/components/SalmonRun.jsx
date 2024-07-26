@@ -1,7 +1,8 @@
-import { formatDate } from "pages/utils"
-import styles from 'styles/Home.module.css';
+import { formatDate } from "utils/util.js";
+import styles from "styles/Home.module.css";
 
 export default function SRunSchedule({ salmonSch }) {
+
     return (
         <div className={styles.scheduleContainer}>
             {salmonSch.results.map((item, index) => (

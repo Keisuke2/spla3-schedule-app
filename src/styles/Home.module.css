@@ -1,3 +1,35 @@
+/* 何らかの理由によりデータを取得できなかった場合のメッセージ */
+.error {
+  background-color: #c0afaf;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+
+/* フッター */
+.footer {
+  width: 100%;
+  /* padding: 1rem; */
+  /* background-color: #2a2a2a; */
+  color: #e0e0e0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.footer a {
+  color: #31ccce;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* メインコンテナ */
 .container {
   min-height: 100vh;
   padding: 2rem;
@@ -17,7 +49,7 @@
 }
 
 .tab:hover {
-  background-color: #333;
+  background-color: #4d4d4d;
   border-color: #4caf50;
 }
 
@@ -32,9 +64,6 @@
   height: 24px;
   vertical-align: middle;
 }
-
-
-/* ここかからはスケジュールのスタイルで、変更可能性あり */
 
 .scheduleContainer {
   display: flex;
@@ -93,12 +122,13 @@
 }
 
 .mode {
-  font-size: 0.8em;
+  font-size: 0.9em;
   margin-bottom: 4px;
 }
 
 .rule {
   font-size: 0.9em;
+  font-weight: bold;
   color: #ff9800;
   margin-bottom: 8px;
 }
@@ -117,12 +147,12 @@
 }
 
 .stageName {
-  font-size: 0.9em;
-  margin: 8px 0;
+  font-size: 0.8em;
+  margin: 0;
 }
 
 .stageImage {
-  width: 100%;
+  width: 80%;
   height: auto;
   border-radius: 8px;
 }
@@ -136,17 +166,17 @@
 }
 
 
-/* バンカラマッチ用のレイアウト */
-
-.bankaraContainer .scheduleItem {
+/* バンカラマッチ・フェスマッチ用のレイアウト */
+.bankaraContainer .scheduleItem,
+.festContainer .scheduleItem {
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 16px;
 }
 
-.bankaraContainer .scheduleInfo {
+.bankaraContainer .scheduleInfo,
+.festContainer .scheduleInfo {
   flex: 0 0 30%;
   padding: 16px;
   display: flex;
@@ -154,16 +184,22 @@
   justify-content: center;
 }
 
-.bankaraContainer .stageContainer {
+.bankaraContainer .stageContainer,
+.festContainer .stageContainer {
   flex: 1;
   display: flex;
   justify-content: space-around;
   padding: 16px;
 }
 
+/* フェスマッチ（トリカラバトル）用のレイアウト */
+.tricolor .mode {
+  color: #90caf9;
+  font-weight: bold;
+}
+
 
 /* イベントマッチ用のレイアウト */
-
 .eventContainer {
   max-width: 800px;
   margin: 0 auto;
@@ -205,9 +241,8 @@
 
 
 /* サーモンラン用のレイアウト */
-
 .bossName {
-  font-size: 0.9em;
+  font-size: 1em;
   color: #ff9800;
 }
 
@@ -239,7 +274,6 @@
   background-color: #585353;
   border-radius: 4px;
   border: 2px solid transparent;
-  /* 初期状態の枠線を透明に */
 }
 
 .weaponName {

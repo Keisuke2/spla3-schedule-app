@@ -1,8 +1,13 @@
 import React from 'react';
-import styles from 'styles/Home.module.css';
-import { formatDate } from 'pages/utils';
+import { formatDate } from "utils/util.js";
+import styles from "styles/Home.module.css";
 
 export default function EventSchedule({ sch }) {
+
+    if (!sch || !sch.result) {
+        return [];
+    }
+
     return (
         <div className={styles.eventContainer}>
             {sch.result.event.reduce((acc, data, i, arr) => {
