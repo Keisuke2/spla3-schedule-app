@@ -2,8 +2,8 @@ import Head from 'next/head';
 import styles from 'styles/Home.module.css';
 import MatchTabs from 'components/MatchTabs';
 import { fetchData } from 'lib/api';
-import path from 'path';
-import fs from 'fs';
+// import path from 'path';
+// import fs from 'fs';
 
 export default function Home({ sch, festOpSch, salmonSch, error }) {
 
@@ -43,25 +43,25 @@ export default function Home({ sch, festOpSch, salmonSch, error }) {
 
 export const getStaticProps = async () => {
   try {
-    const filePath_testData = path.join(process.cwd(), 'src', '__test__', 'testData.json');
-    const filePath_festOpSch = path.join(process.cwd(), 'src', '__test__', 'fest_openData.json');
+    // const filePath_testData = path.join(process.cwd(), 'src', '__test__', 'testData.json');
+    // const filePath_festOpSch = path.join(process.cwd(), 'src', '__test__', 'fest_openData.json');
 
-    let sch, festOpSch;
+    // let sch, festOpSch;
 
-    try {
-      const json_testData = fs.readFileSync(filePath_testData, 'utf8');
-      const json_festOpSch = fs.readFileSync(filePath_festOpSch, 'utf8');
-      sch = JSON.parse(json_testData);
-      festOpSch = JSON.parse(json_festOpSch);
-    } catch (fileError) {
-      console.error('Failed to read or parse local files:', fileError);
-      // ファイルの読み込みに失敗した場合、APIからデータを取得
-      sch = await fetchData('https://spla3.yuu26.com/api/schedule');
-      festOpSch = await fetchData('https://spla3.yuu26.com/api/fest/schedule');
-    }
+    // try {
+    //   const json_testData = fs.readFileSync(filePath_testData, 'utf8');
+    //   const json_festOpSch = fs.readFileSync(filePath_festOpSch, 'utf8');
+    //   sch = JSON.parse(json_testData);
+    //   festOpSch = JSON.parse(json_festOpSch);
+    // } catch (fileError) {
+    //   console.error('Failed to read or parse local files:', fileError);
+    //   // ファイルの読み込みに失敗した場合、APIからデータを取得
+    //   sch = await fetchData('https://spla3.yuu26.com/api/schedule');
+    //   festOpSch = await fetchData('https://spla3.yuu26.com/api/fest/schedule');
+    // }
 
-    // const sch = await fetchData('https://spla3.yuu26.com/api/schedule');
-    // const festOpSch = await fetchData('https://spla3.yuu26.com/api/fest/schedule');
+    const sch = await fetchData('https://spla3.yuu26.com/api/schedule');
+    const festOpSch = await fetchData('https://spla3.yuu26.com/api/fest/schedule');
     const salmonSch = await fetchData('https://spla3.yuu26.com/api/coop-grouping/schedule');
 
     return {
