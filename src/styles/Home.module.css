@@ -1,4 +1,6 @@
-/* 何らかの理由によりデータを取得できなかった場合のメッセージ */
+/**
+ * 何らかの理由によりデータを取得できなかった場合のメッセージ
+ */
 .error {
   background-color: #c0afaf;
   border: 1px solid #ff0000;
@@ -10,7 +12,9 @@
 }
 
 
-/* フッター */
+/**
+ * フッター
+ */
 .footer {
   width: 100%;
   margin: 1rem 0;
@@ -28,13 +32,10 @@
   text-decoration: underline;
 }
 
-/* メインコンテナ */
-.container {
-  min-height: 100vh;
-  padding: 2rem;
-  background-color: #534e4e;
-}
 
+/**
+* タブ
+*/
 .tab {
   background-color: #1e1e1e;
   border: 2px solid #333;
@@ -58,10 +59,20 @@
   color: #ffffff;
 }
 
-.tab img {
+/* .tab img {
   width: 24px;
   height: 24px;
   vertical-align: middle;
+} */
+
+
+/**
+ * 全バトルで共通のスタイル
+ */
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #534e4e;
 }
 
 .scheduleContainer {
@@ -106,18 +117,6 @@
   padding: 4px 8px;
   border-radius: 4px;
   color: #ffffff;
-}
-
-.modeContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.modeItem {
-  padding: 8px;
-  background-color: #444242;
-  border-radius: 4px;
 }
 
 .mode {
@@ -165,7 +164,33 @@
 }
 
 
-/* バンカラマッチ・フェスマッチ用のレイアウト */
+/**
+ * レギュラーマッチ用のレイアウト
+ */
+.regularContainer .rule {
+  color: #7aff93;
+}
+
+
+/**
+ * バンカラマッチ用のレイアウト
+ */
+.bankaraContainer .rule {
+  color: #ff9800;
+}
+
+
+/**
+ * Xマッチ用のレイアウト
+ */
+.xContainer .rule {
+  color: #90f9d9;
+}
+
+
+/**
+ * バンカラマッチ・フェスマッチ共通のレイアウト
+ */
 .bankaraContainer .scheduleItem,
 .festContainer .scheduleItem {
   display: flex;
@@ -191,14 +216,30 @@
   padding: 16px;
 }
 
-/* フェスマッチ（トリカラバトル）用のレイアウト */
-.tricolor .mode {
-  color: #90caf9;
-  font-weight: bold;
+.modeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modeItem {
+  padding: 8px;
+  /* background-color: #444242; */
+  border-radius: 4px;
 }
 
 
-/* イベントマッチ用のレイアウト */
+/**
+ * フェスマッチ用のレイアウト
+ */
+.festContainer .rule {
+  color: #f9ff46;
+}
+
+
+/**
+ * イベントマッチ用のレイアウト
+ */
 .eventContainer {
   max-width: 800px;
   margin: 0 auto;
@@ -221,8 +262,12 @@
 .eventName {
   font-size: 1.2em;
   font-weight: bold;
-  color: #90caf9;
+  color: #f990f7;
   margin-bottom: 8px;
+}
+
+.eventContainer .rule {
+  color: #f990f7;
 }
 
 .eventDesc {
@@ -239,8 +284,11 @@
 }
 
 
-/* サーモンラン用のレイアウト */
+/**
+ * サーモンラン用のレイアウト
+ */
 .bossName {
+  font-weight: bold;
   font-size: 1em;
   color: #ff9800;
 }
@@ -259,7 +307,6 @@
 
 .weaponItem:hover .weaponImage {
   border: 2px solid #ff9800;
-  /* カーソルが当たったときの枠線の色 */
 }
 
 .weaponItem:hover .weaponName {
@@ -270,7 +317,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background-color: #585353;
+  background-color: #a0a0a074;
   border-radius: 4px;
   border: 2px solid transparent;
 }
@@ -289,6 +336,10 @@
   white-space: nowrap;
 }
 
+
+/**
+ * レスポンシブデザイン
+ */
 @media (max-width: 480px) {
   .scheduleItem {
     flex-direction: column;
