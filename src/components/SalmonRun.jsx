@@ -2,6 +2,9 @@ import { formatDate } from "utils/util.js";
 import styles from "styles/Home.module.css";
 
 export default function SRunSchedule({ salmonSch }) {
+    if (!sch || !sch.result) {
+        return [];
+    }
 
     return (
         <div className={styles.scheduleContainer}>

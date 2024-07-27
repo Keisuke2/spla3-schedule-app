@@ -2,8 +2,8 @@ import Head from 'next/head';
 import styles from 'styles/Home.module.css';
 import MatchTabs from 'components/MatchTabs';
 import { fetchData } from 'lib/api';
-import path from 'path';  // 追加
-import fs from 'fs';      // 追加
+import path from 'path';
+import fs from 'fs';
 
 export default function Home({ sch, festOpSch, salmonSch, error }) {
 
@@ -60,6 +60,8 @@ export const getStaticProps = async () => {
       festOpSch = await fetchData('https://spla3.yuu26.com/api/fest/schedule');
     }
 
+    // const sch = await fetchData('https://spla3.yuu26.com/api/schedule');
+    // const festOpSch = await fetchData('https://spla3.yuu26.com/api/fest/schedule');
     const salmonSch = await fetchData('https://spla3.yuu26.com/api/coop-grouping/schedule');
 
     return {

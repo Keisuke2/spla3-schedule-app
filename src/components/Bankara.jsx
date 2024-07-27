@@ -4,7 +4,6 @@ import { formatDate, filterData } from "utils/util.js";
 import styles from "styles/Home.module.css";
 
 export default function BankaraSchedule({ sch, maxDisplayedItems }) {
-
     if (!sch || !sch.result) {
         return [];
     }

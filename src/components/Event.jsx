@@ -3,7 +3,6 @@ import { formatDate } from "utils/util.js";
 import styles from "styles/Home.module.css";
 
 export default function EventSchedule({ sch }) {
-
     if (!sch || !sch.result) {
         return [];
     }

@@ -3,11 +3,11 @@ import { formatDate, filterData } from "utils/util.js"
 import styles from 'styles/Home.module.css';
 
 export default function RegularSchedule({ sch, maxDisplayedItems }) {
+    if (!sch || !sch.result) {
+        return [];
+    }
 
     const filteredRegularSch = useMemo(() => {
-        if (!sch || !sch.result) {
-            return [];
-        }
         return filterData(sch.result.regular, maxDisplayedItems);
     }, [sch, maxDisplayedItems]);
 
