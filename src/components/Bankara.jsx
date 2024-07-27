@@ -27,10 +27,11 @@ export default function BankaraSchedule({ sch, maxDisplayedItems }) {
                     <p className={styles.noSchMsg}>フェス開催中のため現在スケジュールはありません</p>
                 ) : (
                     filteredBankaraChSch.map((item, index) => (
-                        <div key={item.start_time} className={styles.scheduleItem}>
+                        !item.is_fest && (<div key={item.start_time} className={styles.scheduleItem}>
                             <MergeCh_Op sch={item} mode="チャレンジ" isTimeDisplayed={true} />
                             <MergeCh_Op sch={filteredBankaraOpSch[index]} mode="オープン" isTimeDisplayed={false} />
                         </div>
+                        )
                     ))
                 )}
             </div>
