@@ -2,7 +2,7 @@ import { formatDate } from "utils/util.js";
 import styles from "styles/Home.module.css";
 
 export default function SRunSchedule({ salmonSch }) {
-    if (!sch || !sch.result) {
+    if (!salmonSch || !salmonSch.result) {
         return [];
     }
 
