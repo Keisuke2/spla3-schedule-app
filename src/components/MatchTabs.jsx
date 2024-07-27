@@ -28,7 +28,7 @@ const MatchTabs = ({ sch, festOpSch, salmonSch }) => {
         <TabGroup>
             <TabList className={styles.tabs}>
                 <TabItem
-                    src='/img/button/regular.png'
+                    src='/images/button/regular.png'
                     alt='レギュラーマッチのアイコン'
                     isActive={activeTab === 0}
                     onClick={() => setActiveTab(0)}
@@ -36,7 +36,7 @@ const MatchTabs = ({ sch, festOpSch, salmonSch }) => {
                     レギュラーマッチ
                 </TabItem>
                 <TabItem
-                    src='/img/button/bankara.png'
+                    src='/images/button/bankara.png'
                     alt='バンカラマッチのアイコン'
                     isActive={activeTab === 1}
                     onClick={() => setActiveTab(1)}
@@ -44,7 +44,7 @@ const MatchTabs = ({ sch, festOpSch, salmonSch }) => {
                     バンカラマッチ
                 </TabItem>
                 <TabItem
-                    src='/img/button/x.png'
+                    src='/images/button/x.png'
                     alt='Xマッチのアイコン'
                     isActive={activeTab === 2}
                     onClick={() => setActiveTab(2)}
@@ -52,7 +52,7 @@ const MatchTabs = ({ sch, festOpSch, salmonSch }) => {
                     Xマッチ
                 </TabItem>
                 <TabItem
-                    src='/img/button/event.png'
+                    src='/images/button/event.png'
                     alt='イベントマッチのアイコン'
                     isActive={activeTab === 3}
                     onClick={() => setActiveTab(3)}
@@ -60,7 +60,7 @@ const MatchTabs = ({ sch, festOpSch, salmonSch }) => {
                     イベントマッチ
                 </TabItem>
                 <TabItem
-                    src='/img/button/fest.png'
+                    src='/images/button/fest.png'
                     alt='フェスマッチのアイコン'
                     isActive={activeTab === 4}
                     onClick={() => setActiveTab(4)}
@@ -68,7 +68,7 @@ const MatchTabs = ({ sch, festOpSch, salmonSch }) => {
                     フェスマッチ
                 </TabItem>
                 <TabItem
-                    src='/img/button/salmonrun.png'
+                    src='/images/button/salmonrun.png'
                     alt='サーモンランのアイコン'
                     isActive={activeTab === 5}
                     onClick={() => setActiveTab(5)}
