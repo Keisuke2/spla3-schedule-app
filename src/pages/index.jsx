@@ -12,18 +12,18 @@ export default function Home({ sch, festOpSch, salmonSch, error }) {
       <Head prefix='og:http://ogp.me/ns#'>
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width' />
-        <title>Spla3 Stage Schedule</title>
-        {/* <meta name="description" content="スプラ3のステージスケジュール" />
-      <meta property="og:url" content="アプリのURL" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="Spla3 Stage Schedule" />
-      <meta property="og:description" content="スプラ3のステージスケジュール" />
-      <meta property="og:site_name" content="Spla3 Stage Schedule" />
-      <meta property="og:image" content="Facebook や Twitter などのソーシャルメディアプラットフォームで、ウェブページのリンクが共有されたときに表示されるサムネイル画像として使用される" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <link rel="manifest" href="アプリの名前やアイコン情報、アプリが開いた時のURL設定など、色々な情報が設定" />
-      <link rel="apple-touch-icon" href="/icon.png"></link>
-      <link rel="icon" href="ブラウザのタブに表示される小さいアイコン" /> */}
+        <title>Splatoon3 最新スケジュール</title>
+        <meta name="description" content="スプラトゥーン3のスケジュール" />
+        {/* <meta property="og:url" content="アプリのURL" /> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Splatoon3 スケジュール" />
+        <meta property="og:description" content="スプラトゥーン3のスケジュール" />
+        <meta property="og:site_name" content="Splatoon3 スケジュール" />
+        {/* <meta property="og:image" content="Facebook や Twitter などのソーシャルメディアプラットフォームで、ウェブページのリンクが共有されたときに表示されるサムネイル画像として使用される" /> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icon.png"></link>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
