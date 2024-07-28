@@ -1,8 +1,10 @@
+import React from "react";
+import PropTypes from "prop-types";
 import { formatDate } from "utils/util.js";
 import styles from "styles/Home.module.css";
 
 export default function SRunSchedule({ salmonSch }) {
-    if (!salmonSch || !salmonSch.result) {
+    if (!salmonSch || !salmonSch.results) {
         return [];
     }
 
@@ -33,3 +35,7 @@ export default function SRunSchedule({ salmonSch }) {
         </div>
     );
 }
+
+SRunSchedule.propTypes = {
+    salmonSch: PropTypes.object.isRequired,
+};

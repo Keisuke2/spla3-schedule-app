@@ -1,11 +1,15 @@
+import React from 'react';
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 import styles from 'styles/Home.module.css';
-import MatchTabs from 'components/MatchTabs';
+import { useState } from 'react';
 import { fetchData } from 'lib/api';
-// import path from 'path';
-// import fs from 'fs';
+import { TabGroup } from '@headlessui/react';
+import TabButtons from 'components/tabs/TabButton';
+import TabContents from 'components/tabs/TabContent';
 
 export default function Home({ sch, festOpSch, salmonSch, error }) {
+  const [activeTab, setActiveTab] = useState(0);
 
   return (
     <div className={styles.container}>
@@ -28,9 +32,11 @@ export default function Home({ sch, festOpSch, salmonSch, error }) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Splatoon3 スケジュール</h1>
-
-        <MatchTabs sch={sch} festOpSch={festOpSch} salmonSch={salmonSch} />
-        {error && <p className={styles.error}>{error}</p>}
+        <TabGroup>
+          <TabButtons activeTab={activeTab} setActiveTab={setActiveTab} />
+          {error || !sch || !festOpSch || !salmonSch && <div className={styles.error}>{error}</div>}
+          <TabContents sch={sch} festOpSch={festOpSch} salmonSch={salmonSch} />
+        </TabGroup>
       </main>
 
       <footer className={styles.footer}>
@@ -41,25 +47,15 @@ export default function Home({ sch, festOpSch, salmonSch, error }) {
   )
 }
 
+Home.propTypes = {
+  sch: PropTypes.object,
+  festOpSch: PropTypes.object,
+  salmonSch: PropTypes.object,
+  error: PropTypes.string
+};
+
 export const getStaticProps = async () => {
   try {
-    // const filePath_testData = path.join(process.cwd(), 'src', '__test__', 'testData.json');
-    // const filePath_festOpSch = path.join(process.cwd(), 'src', '__test__', 'fest_openData.json');
-
-    // let sch, festOpSch;
-
-    // try {
-    //   const json_testData = fs.readFileSync(filePath_testData, 'utf8');
-    //   const json_festOpSch = fs.readFileSync(filePath_festOpSch, 'utf8');
-    //   sch = JSON.parse(json_testData);
-    //   festOpSch = JSON.parse(json_festOpSch);
-    // } catch (fileError) {
-    //   console.error('Failed to read or parse local files:', fileError);
-    //   // ファイルの読み込みに失敗した場合、APIからデータを取得
-    //   sch = await fetchData('https://spla3.yuu26.com/api/schedule');
-    //   festOpSch = await fetchData('https://spla3.yuu26.com/api/fest/schedule');
-    // }
-
     const sch = await fetchData('https://spla3.yuu26.com/api/schedule');
     const festOpSch = await fetchData('https://spla3.yuu26.com/api/fest/schedule');
     const salmonSch = await fetchData('https://spla3.yuu26.com/api/coop-grouping/schedule');

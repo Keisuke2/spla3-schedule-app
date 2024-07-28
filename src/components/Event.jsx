@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { formatDate } from "utils/util.js";
 import styles from "styles/Home.module.css";
 
@@ -41,3 +42,7 @@ export default function EventSchedule({ sch }) {
         </div>
     );
 }
+
+EventSchedule.propTypes = {
+    sch: PropTypes.object.isRequired,
+};

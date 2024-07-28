@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import React, { useMemo } from "react";
+import PropTypes from "prop-types";
 import { formatDate, filterData } from "utils/util.js";
 import styles from "styles/Home.module.css";
 
@@ -42,3 +43,8 @@ export default function XSchedule({ sch, maxDisplayedItems }) {
         </div>
     );
 }
+
+XSchedule.propTypes = {
+    sch: PropTypes.object.isRequired,
+    maxDisplayedItems: PropTypes.number.isRequired,
+};

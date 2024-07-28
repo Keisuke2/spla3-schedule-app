@@ -1,5 +1,5 @@
-import React from "react";
-import { useMemo } from "react";
+import React, { useMemo } from "react";
+import PropTypes from "prop-types";
 import { formatDate, filterData } from "utils/util.js";
 import styles from "styles/Home.module.css";
 
@@ -38,6 +38,11 @@ export default function BankaraSchedule({ sch, maxDisplayedItems }) {
     )
 }
 
+BankaraSchedule.propTypes = {
+    sch: PropTypes.object.isRequired,
+    maxDisplayedItems: PropTypes.number.isRequired
+};
+
 const MergeCh_Op = ({ sch, mode, isTimeDisplayed }) => {
     return (
         <div className={styles.scheduleContent}>
@@ -65,3 +70,9 @@ const MergeCh_Op = ({ sch, mode, isTimeDisplayed }) => {
         </div>
     );
 }
+
+MergeCh_Op.propTypes = {
+    sch: PropTypes.object.isRequired,
+    mode: PropTypes.string.isRequired,
+    isTimeDisplayed: PropTypes.bool.isRequired
+};

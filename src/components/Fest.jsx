@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import PropTypes from "prop-types";
 import { formatDate, filterData } from "utils/util.js";
 import styles from "styles/Home.module.css";
 
@@ -41,6 +42,12 @@ export default function FestSchedule({ sch, festOpSch, maxDisplayedItems }) {
     );
 }
 
+FestSchedule.propTypes = {
+    sch: PropTypes.object.isRequired,
+    festOpSch: PropTypes.object.isRequired,
+    maxDisplayedItems: PropTypes.number.isRequired
+};
+
 const MergeCh_Op = ({ sch, mode, isTimeDisplayed }) => {
     return (
         <div className={styles.scheduleContent}>
@@ -69,6 +76,12 @@ const MergeCh_Op = ({ sch, mode, isTimeDisplayed }) => {
     );
 };
 
+MergeCh_Op.propTypes = {
+    sch: PropTypes.object.isRequired,
+    mode: PropTypes.string.isRequired,
+    isTimeDisplayed: PropTypes.bool.isRequired
+};
+
 const TricolorBattle = ({ sch }) => {
     return (
         <div className={styles.tricolor}>
@@ -92,4 +105,8 @@ const TricolorBattle = ({ sch }) => {
             </div>
         </div>
     );
+};
+
+TricolorBattle.propTypes = {
+    sch: PropTypes.object.isRequired
 };
