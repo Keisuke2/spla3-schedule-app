@@ -2,14 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import styles from 'styles/Home.module.css';
-import { useState } from 'react';
 import { fetchData } from 'lib/api';
-import { TabGroup } from '@headlessui/react';
-import TabButtons from 'components/tabs/TabButton';
-import TabContents from 'components/tabs/TabContent';
+import MatchTabs from 'components/tabs/MatchTabs';
 
 export default function Home({ sch, festOpSch, salmonSch, error }) {
-  const [activeTab, setActiveTab] = useState(0);
 
   return (
     <div className={styles.container}>
@@ -32,11 +28,8 @@ export default function Home({ sch, festOpSch, salmonSch, error }) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Splatoon3 スケジュール</h1>
-        <TabGroup>
-          <TabButtons activeTab={activeTab} setActiveTab={setActiveTab} />
-          {error || !sch || !festOpSch || !salmonSch && <div className={styles.error}>{error}</div>}
-          <TabContents sch={sch} festOpSch={festOpSch} salmonSch={salmonSch} />
-        </TabGroup>
+        <MatchTabs sch={sch} festOpSch={festOpSch} salmonSch={salmonSch} />
+        {error && <div className={styles.error}>{error}</div>}
       </main>
 
       <footer className={styles.footer}>
