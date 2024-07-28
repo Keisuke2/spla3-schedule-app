@@ -7,7 +7,7 @@ import { NoScheduleMessage, ErrorMessage } from "components/Message";
 export default function BankaraSchedule({ sch, maxDisplayedItems }) {
     try {
         const filteredBankaraChSch = useMemo(() => {
-            return filterData(sch.results.bankara_challenge, maxDisplayedItems);
+            return filterData(sch.result.bankara_challenge, maxDisplayedItems);
         }, [sch, maxDisplayedItems]);
 
         const filteredBankaraOpSch = useMemo(() => {
