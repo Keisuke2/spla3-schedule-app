@@ -17,7 +17,7 @@ TabContent.propTypes = {
     children: PropTypes.node
 };
 
-const maxDisplayedItems = 5;
+const maxDisplayedItems = 12;
 
 const TabContents = ({ sch, festOpSch, salmonSch }) => {
     return (
