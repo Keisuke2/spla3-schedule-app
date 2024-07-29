@@ -61,6 +61,12 @@
 /**
 * タブ
 */
+.tabs {
+  display: flex;
+  justify-content: center;
+  /* padding: 1.5rem; */
+}
+
 .tab {
   background-color: #1e1e1e;
   border: 2px solid #333;
