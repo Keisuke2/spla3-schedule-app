@@ -22,13 +22,6 @@
   text-align: center;
 }
 
-/* 変更 */
-@media (max-width: 767px) {
-  .errorMsg {
-    padding: 0.75rem 1rem;
-    font-size: 0.9em;
-  }
-}
 
 /**
  * フェスマッチ非開催時のメッセージ
@@ -43,13 +36,6 @@
   font-size: 1.1em;
 }
 
-/* 変更 */
-@media (max-width: 767px) {
-  .noSchMsg {
-    padding: 0.75rem 1rem;
-    font-size: 0.9em;
-  }
-}
 
 /**
  * フッター
@@ -62,13 +48,6 @@
   font-size: 0.8em;
 }
 
-/* 変更 */
-@media (max-width: 767px) {
-  .footer {
-    font-size: 0.7em;
-  }
-}
-
 .footer a {
   color: #31ccce;
   text-decoration: none;
@@ -77,6 +56,7 @@
 .footer a:hover {
   text-decoration: underline;
 }
+
 
 /**
 * タブ
@@ -88,16 +68,9 @@
   padding: 12px 20px;
   cursor: pointer;
   margin: 10px;
+  /* transition: all 0.1s ease; */
   font-weight: 600;
   color: #e0e0e0;
-}
-
-/* 変更 */
-@media (max-width: 767px) {
-  .tab {
-    padding: 0.5rem 1rem;
-    font-size: 0.9em;
-  }
 }
 
 .tab:hover {
@@ -111,6 +84,13 @@
   color: #ffffff;
 }
 
+/* .tab img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+} */
+
+
 /**
  * 全バトルで共通のスタイル
  */
@@ -118,13 +98,6 @@
   min-height: 100vh;
   padding: 2rem;
   background-color: #534e4e;
-}
-
-/* 変更 */
-@media (max-width: 767px) {
-  .container {
-    padding: 1rem;
-  }
 }
 
 .scheduleContainer {
@@ -135,26 +108,12 @@
   margin: 0 auto;
 }
 
-/* 追加 */
-@media (min-width: 1024px) {
-  .scheduleContainer {
-    max-width: 1000px;
-  }
-}
-
 .scheduleItem {
   display: flex;
   background-color: #3a3a3a;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* 変更 */
-@media (max-width: 767px) {
-  .scheduleItem {
-    flex-direction: column;
-  }
 }
 
 .scheduleContent {
@@ -174,15 +133,6 @@
   justify-content: center;
   border-right: 1px solid #e0e0e0;
   background-color: #2a2a2a;
-}
-
-/* 変更 */
-@media (max-width: 767px) {
-  .scheduleInfo {
-    flex: none;
-    border-right: none;
-    border-bottom: 1px solid #e0e0e0;
-  }
 }
 
 .time {
@@ -214,24 +164,9 @@
   padding: 16px;
 }
 
-/* 変更 */
-@media (max-width: 767px) {
-  .stageContainer {
-    flex-direction: column;
-  }
-}
-
 .stageItem {
   text-align: center;
   width: 45%;
-}
-
-/* 変更 */
-@media (max-width: 767px) {
-  .stageItem {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
 }
 
 .stageName {
@@ -245,12 +180,14 @@
   border-radius: 8px;
 }
 
+
 /**
  * レギュラーマッチ用のレイアウト
  */
 .regularContainer .rule {
   color: #7aff93;
 }
+
 
 /**
  * バンカラマッチ用のレイアウト
@@ -259,12 +196,14 @@
   color: #ff9800;
 }
 
+
 /**
  * Xマッチ用のレイアウト
  */
 .xContainer .rule {
   color: #90f9d9;
 }
+
 
 /**
  * バンカラマッチ・フェスマッチ共通のレイアウト
@@ -302,8 +241,10 @@
 
 .modeItem {
   padding: 8px;
+  /* background-color: #444242; */
   border-radius: 4px;
 }
+
 
 /**
  * フェスマッチ用のレイアウト
@@ -312,6 +253,7 @@
   color: #f9ff46;
 }
 
+
 /**
  * イベントマッチ用のレイアウト
  */
@@ -319,13 +261,6 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 16px;
-}
-
-/* 変更 */
-@media (max-width: 767px) {
-  .eventContainer {
-    padding: 1rem;
-  }
 }
 
 .eventContainer .scheduleItem {
@@ -348,13 +283,6 @@
   margin-bottom: 8px;
 }
 
-/* 変更 */
-@media (max-width: 767px) {
-  .eventName {
-    font-size: 1em;
-  }
-}
-
 .eventContainer .rule {
   color: #f990f7;
 }
@@ -372,6 +300,7 @@
   margin-bottom: 8px;
 }
 
+
 /**
  * サーモンラン用のレイアウト
  */
@@ -387,27 +316,10 @@
   gap: 12px;
 }
 
-/* 変更 */
-@media (max-width: 767px) {
-  .weaponContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-    gap: 0.5rem;
-  }
-}
-
 .weaponItem {
   width: 48px;
   height: 48px;
   position: relative;
-}
-
-/* 変更 */
-@media (max-width: 767px) {
-  .weaponItem {
-    width: 40px;
-    height: 40px;
-  }
 }
 
 .weaponItem:hover .weaponImage {
@@ -442,100 +354,20 @@
 }
 
 
-/* 追加: フレックスボックスの基本設定 */
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* 追加: グリッドレイアウトの基本設定 */
-.grid-container {
-  display: grid;
-  gap: 1rem;
-}
-
-/* ステージコンテナの修正 */
-.stageContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 16px;
-}
-
-.stageItem {
-  width: calc(50% - 8px);
-  /* 8pxは余白の半分 */
-  margin-bottom: 16px;
-  text-align: center;
-}
-
-.stageImage {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* サーモンランの武器コンテナの修正 */
-.weaponContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-}
-
-.weaponItem {
-  width: 40px;
-  height: 40px;
-  position: relative;
-}
-
-/* レスポンシブ対応 */
+/**
+ * レスポンシブデザイン
+ */
 @media (max-width: 480px) {
-  .stageContainer {
+  .scheduleItem {
     flex-direction: column;
   }
 
-  .stageItem {
-    width: 100%;
+  .scheduleInfo {
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
   }
 
-  .weaponContainer {
-    justify-content: flex-start;
+  .stageContainer {
+    flex-direction: column;
   }
-
-  .weaponItem {
-    width: calc(25% - 6px);
-    /* 4つ並べるための調整 */
-    height: auto;
-    aspect-ratio: 1 / 1;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  .weaponItem {
-    width: calc(20% - 6.4px);
-    /* 5つ並べるための調整 */
-    height: auto;
-    aspect-ratio: 1 / 1;
-  }
-}
-
-/* 武器名のツールチップ調整 */
-.weaponName {
-  display: none;
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.7em;
-  background-color: rgba(51, 51, 51, 0.9);
-  color: #fff;
-  padding: 3px 6px;
-  border-radius: 4px;
-  white-space: nowrap;
-  z-index: 10;
-}
-
-.weaponItem:hover .weaponName {
-  display: block;
 }
