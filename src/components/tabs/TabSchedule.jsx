@@ -4,7 +4,7 @@ import { TabGroup } from '@headlessui/react';
 import TabContents from 'components/tabs/Content';
 import TabButtons from 'components/tabs/Button';
 
-const ScheduleTabs = ({ sch, festOpSch, salmonSch }) => {
+const TabSchedule = ({ sch, festOpSch, salmonSch }) => {
     return (
         <TabGroup>
             <TabButtons sch={sch} festOpSch={festOpSch} salmonSch={salmonSch} />
@@ -13,10 +13,10 @@ const ScheduleTabs = ({ sch, festOpSch, salmonSch }) => {
     );
 };
 
-ScheduleTabs.propTypes = {
+TabSchedule.propTypes = {
     sch: PropTypes.object.isRequired,
     festOpSch: PropTypes.object.isRequired,
     salmonSch: PropTypes.object.isRequired
 };
 
-export default ScheduleTabs;
+export default TabSchedule;
