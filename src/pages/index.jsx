@@ -1,4 +1,5 @@
 import React from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import styles from 'styles/Home.module.css';
@@ -29,6 +30,7 @@ export default function Home({ sch, festOpSch, salmonSch, error }) {
       <main className={styles.main}>
         <h1 className={styles.title}>Splatoon3 スケジュール</h1>
         <TabSchedule sch={sch} festOpSch={festOpSch} salmonSch={salmonSch} />
+        <SpeedInsights />
         {error && <div className={styles.error}>{error}</div>}
       </main>
 
