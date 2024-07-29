@@ -374,7 +374,7 @@
 /**
  * レスポンシブデザイン
  */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .title {
     font-size: 1.4em;
   }
@@ -401,6 +401,10 @@
 
   .scheduleItem {
     flex-direction: column;
+  }
+
+  .sRunContainer .scheduleItem {
+    padding-bottom: 2.4rem;
   }
 
   .scheduleInfo {
@@ -434,6 +438,20 @@
 
   .sRunContainer .stageItem {
     width: 100%;
-    padding: 1.2rem;
+    padding: 1.1rem;
+  }
+
+  .sRunContainer .stageImage {
+    width: 50%;
+  }
+
+  .weaponContainer {
+    padding: 8px;
+  }
+
+  .weaponName {
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
