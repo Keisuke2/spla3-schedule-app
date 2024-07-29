@@ -208,41 +208,44 @@
 /**
  * バンカラマッチ・フェスマッチ共通のレイアウト
  */
-.bankaraContainer .scheduleItem,
-.festContainer .scheduleItem {
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  overflow: hidden;
-}
+@media (min-width: 480px) {
 
-.bankaraContainer .scheduleInfo,
-.festContainer .scheduleInfo {
-  flex: 0 0 30%;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  .bankaraContainer .scheduleItem,
+  .festContainer .scheduleItem {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+  }
 
-.bankaraContainer .stageContainer,
-.festContainer .stageContainer {
-  flex: 1;
-  display: flex;
-  justify-content: space-around;
-  padding: 16px;
-}
+  .bankaraContainer .scheduleInfo,
+  .festContainer .scheduleInfo {
+    flex: 0 0 30%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.modeContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+  .bankaraContainer .stageContainer,
+  .festContainer .stageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+  }
 
-.modeItem {
-  padding: 8px;
-  /* background-color: #444242; */
-  border-radius: 4px;
+  .modeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .modeItem {
+    padding: 8px;
+    /* background-color: #444242; */
+    border-radius: 4px;
+  }
 }
 
 
