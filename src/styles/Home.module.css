@@ -243,7 +243,7 @@
 
   .modeItem {
     padding: 8px;
-    /* background-color: #444242; */
+    background-color: #444242;
     border-radius: 4px;
   }
 }
@@ -315,6 +315,8 @@
 
 .weaponContainer {
   display: flex;
+  flex-wrap: wrap;
+  /* 画像が見切れないようにflex-wrapを追加 */
   justify-content: center;
   gap: 12px;
 }
@@ -323,6 +325,8 @@
   width: 48px;
   height: 48px;
   position: relative;
+  flex-shrink: 0;
+  /* 画像の縮小を防ぐ */
 }
 
 .weaponItem:hover .weaponImage {
@@ -335,7 +339,8 @@
 
 .weaponImage {
   width: 100%;
-  height: 100%;
+  /* 画像の幅を100%に設定 */
+  height: auto;
   object-fit: contain;
   background-color: #a0a0a074;
   border-radius: 4px;
@@ -347,7 +352,7 @@
   position: absolute;
   bottom: -40px;
   left: 50%;
-  transform: translateX(-70%);
+  transform: translateX(-50%);
   font-size: 0.8em;
   background-color: #333;
   color: #fff;
@@ -426,6 +431,26 @@
   }
 
   .stageName {
+    font-size: 0.7em;
+  }
+
+  .weaponContainer {
+    justify-content: space-around;
+  }
+
+  .weaponItem {
+    width: 24px;
+    /* 幅を狭くする */
+    height: 24px;
+    /* 高さを狭くする */
+  }
+
+  .weaponImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .weaponName {
     font-size: 0.7em;
   }
 }
