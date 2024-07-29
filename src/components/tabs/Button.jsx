@@ -28,48 +28,42 @@ const TabButtons = () => {
                 // alt='レギュラーマッチのアイコン'
                 isActive={activeTab === 0}
                 onClick={() => setActiveTab(0)}
-            >
-                レギュラーマッチ
+            > <p className={styles.tabName}>レギュラーマッチ</p>
             </TabButton>
             <TabButton
                 // src='/images/button/bankara.png'
                 // alt='バンカラマッチのアイコン'
                 isActive={activeTab === 1}
                 onClick={() => setActiveTab(1)}
-            >
-                バンカラマッチ
+            > <p className={styles.tabName}>バンカラマッチ</p>
             </TabButton>
             <TabButton
                 // src='/images/button/x.png'
                 // alt='Xマッチのアイコン'
                 isActive={activeTab === 2}
                 onClick={() => setActiveTab(2)}
-            >
-                Xマッチ
+            > <p className={styles.tabName}>Xマッチ</p>
             </TabButton>
             <TabButton
                 // src='/images/button/event.png'
                 // alt='イベントマッチのアイコン'
                 isActive={activeTab === 3}
                 onClick={() => setActiveTab(3)}
-            >
-                イベントマッチ
+            > <p className={styles.tabName}>イベントマッチ</p>
             </TabButton>
             <TabButton
                 // src='/images/button/fest.png'
                 // alt='フェスマッチのアイコン'
                 isActive={activeTab === 4}
                 onClick={() => setActiveTab(4)}
-            >
-                フェスマッチ
+            > <p className={styles.tabName}>フェスマッチ</p>
             </TabButton>
             <TabButton
                 // src='/images/button/salmonrun.png'
                 // alt='サーモンランのアイコン'
                 isActive={activeTab === 5}
                 onClick={() => setActiveTab(5)}
-            >
-                サーモンラン
+            > <p className={styles.tabName}>サーモンラン</p>
             </TabButton>
         </TabList>
     );

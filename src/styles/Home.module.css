@@ -69,6 +69,7 @@
   cursor: pointer;
   margin: 10px;
   /* transition: all 0.1s ease; */
+  align-items: center;
   font-weight: 600;
   color: #e0e0e0;
 }
@@ -156,7 +157,11 @@
   margin-bottom: 8px;
 }
 
-.stageContainer {
+.regularContainer .stageContainer,
+.bankaraContainer .stageContainer,
+.xContainer .stageContainer,
+.festContainer .stageContainer,
+.eventContainer .stageContainer {
   flex: 1;
   display: flex;
   justify-content: space-around;
@@ -241,7 +246,7 @@
 
 .modeItem {
   padding: 8px;
-  /* background-color: #444242; */
+  background-color: #444242;
   border-radius: 4px;
 }
 
@@ -310,9 +315,21 @@
   color: #ff9800;
 }
 
+.sRunContainer .stageContainer {
+  display: flex;
+  align-items: center;
+}
+
+.sRunContainer .stageItem {
+  margin: 0 auto;
+  width: 50%;
+}
+
 .weaponContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 1rem;
   gap: 12px;
 }
 
@@ -357,17 +374,66 @@
 /**
  * レスポンシブデザイン
  */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.4em;
+  }
+
+  .tabs {
+    /* flex-direction: column; */
+    padding: 1.1rem;
+  }
+
+  .tab {
+    padding: 6px 12px;
+    margin: 2px;
+    font-size: 0.8em;
+  }
+
+  .tabName {
+    font-size: 1em;
+    margin: 0;
+  }
+
+  .scheduleContent {
+    flex-flow: column;
+  }
+
   .scheduleItem {
     flex-direction: column;
   }
 
   .scheduleInfo {
     border-right: none;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: none;
   }
 
-  .stageContainer {
-    flex-direction: column;
+  .modeItem {
+    display: flex;
+    /* justify-content: center; */
+    /* padding: 0 0 0 1rem; */
+    padding: 0;
+  }
+
+  .mode {
+    margin: 0 1rem 0 0;
+
+  }
+
+  .rule {
+    margin: 0;
+  }
+
+  .time {
+    margin-bottom: 1rem;
+  }
+
+  .bossName {
+    margin: 0;
+  }
+
+  .sRunContainer .stageItem {
+    width: 100%;
+    padding: 1.2rem;
   }
 }
