@@ -3,7 +3,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import styles from 'styles/Home.module.css';
 import { fetchData } from 'lib/api';
-import MatchTabs from 'components/tabs/MatchTabs';
+import TabSchedule from 'components/tabs/TabSchedule';
 
 export default function Home({ sch, festOpSch, salmonSch, error }) {
 
@@ -13,11 +13,11 @@ export default function Home({ sch, festOpSch, salmonSch, error }) {
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width' />
         <title>Splatoon3 最新スケジュール</title>
-        <meta name="description" content="スプラトゥーン3のスケジュール" />
-        {/* <meta property="og:url" content="アプリのURL" /> */}
+        <meta name="description" content="スプラトゥーン3の最新スケジュール（レギュラー、バンカラ、X、イベント、フェス、サーモンラン）を見るならここ!!" />
+        <meta property="og:url" content="https://www.splatoon3-schedule.net/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Splatoon3 スケジュール" />
-        <meta property="og:description" content="スプラトゥーン3のスケジュール" />
+        <meta property="og:description" content="スプラトゥーン3の最新スケジュール（レギュラー、バンカラ、X、イベント、フェス、サーモンラン）を見るならここ!!" />
         <meta property="og:site_name" content="Splatoon3 スケジュール" />
         {/* <meta property="og:image" content="Facebook や Twitter などのソーシャルメディアプラットフォームで、ウェブページのリンクが共有されたときに表示されるサムネイル画像として使用される" /> */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -28,7 +28,7 @@ export default function Home({ sch, festOpSch, salmonSch, error }) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Splatoon3 スケジュール</h1>
-        <MatchTabs sch={sch} festOpSch={festOpSch} salmonSch={salmonSch} />
+        <TabSchedule sch={sch} festOpSch={festOpSch} salmonSch={salmonSch} />
         {error && <div className={styles.error}>{error}</div>}
       </main>
 
