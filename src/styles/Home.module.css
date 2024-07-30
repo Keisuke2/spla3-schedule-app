@@ -59,46 +59,6 @@
 
 
 /**
-* タブ
-*/
-.tabs {
-  display: flex;
-  justify-content: center;
-  /* padding: 1.5rem; */
-}
-
-.tab {
-  background-color: #1e1e1e;
-  border: 2px solid #333;
-  border-radius: 8px;
-  padding: 12px 20px;
-  cursor: pointer;
-  margin: 10px;
-  /* transition: all 0.1s ease; */
-  align-items: center;
-  font-weight: 600;
-  color: #e0e0e0;
-}
-
-.tab:hover {
-  background-color: #4d4d4d;
-  border-color: #4caf50;
-}
-
-.tab.active {
-  background-color: #4caf50;
-  border-color: #a2aaa2;
-  color: #ffffff;
-}
-
-/* .tab img {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-} */
-
-
-/**
  * 全バトルで共通のスタイル
  */
 .container {
@@ -383,22 +343,6 @@
 @media (max-width: 800px) {
   .title {
     font-size: 1.4em;
-  }
-
-  .tabs {
-    /* flex-direction: column; */
-    padding: 1.1rem;
-  }
-
-  .tab {
-    padding: 6px 12px;
-    margin: 2px;
-    font-size: 0.8em;
-  }
-
-  .tabName {
-    font-size: 1em;
-    margin: 0;
   }
 
   .scheduleContent {
