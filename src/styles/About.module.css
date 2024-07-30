@@ -1,0 +1,82 @@
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lastUpdated {
+    font-size: 0.9rem;
+    color: #90caf9;
+    text-align: right;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #90caf9;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #90caf9;
+    padding-bottom: 0.5rem;
+}
+
+.paragraph {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.link {
+    color: #90caf9;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    font-weight: 500;
+}
+
+.link:hover {
+    color: #42a5f5;
+    text-decoration: underline;
+}
+
+.list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.listItem {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.listItem::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #90caf9;
+}
+
+.contact {
+    margin-top: 2rem;
+    font-weight: bold;
+    background-color: #545454;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    color: #90caf9;
+    margin-bottom: 1rem;
+    border-left: 4px solid #90caf9;
+    padding-left: 0.5rem;
+}
