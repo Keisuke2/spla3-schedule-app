@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Analytics } from "@vercel/analytics/react"
 import styles from 'styles/Home.module.css';
 import { fetchData } from 'lib/api';
 import Header from 'components/Header';
@@ -9,6 +10,7 @@ import Footer from 'components/Footer';
 export default function Home({ sch, festOpSch, salmonSch, error }) {
   return (
     <div className={styles.container}>
+      <Analytics />
       <Header />
       <Main sch={sch} festOpSch={festOpSch} salmonSch={salmonSch} error={error} />
       <Footer />
