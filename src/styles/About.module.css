@@ -1,5 +1,6 @@
 .container {
     max-width: 800px;
+    width: 90%;
     margin: 2rem auto;
     padding: 2rem;
     background-color: #3a3a3a;
@@ -79,4 +80,24 @@
     margin-bottom: 1rem;
     border-left: 4px solid #90caf9;
     padding-left: 0.5rem;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .paragraph {
+        font-size: 1rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.25rem;
+    }
 }
