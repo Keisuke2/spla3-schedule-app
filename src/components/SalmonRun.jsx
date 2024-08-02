@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useMemo } from "react";
 import PropTypes from "prop-types";
-import { formatDate } from "utils/util.js";
+import { filterData, formatDate } from "utils/util.js";
 import styles from "styles/Home.module.css";
 import { ErrorMessage } from "components/Message";
 
 export default function SRunSchedule({ salmonSch }) {
     try {
+        const filteredSalmonSch = useMemo(() => {
+            return filterData(salmonSch.results);
+        }, [salmonSch]);
+
         return (
             <div className={styles.sRunContainer}>
                 <div className={styles.scheduleContainer}>
-                    {salmonSch.results.map((item, index) => (
+                    {filteredSalmonSch.map((item, index) => (
                         <div key={index} className={styles.scheduleItem}>
                             <div className={styles.scheduleInfo}>
                                 <p className={styles.time}>{formatDate(item.start_time, item.end_time)}</p>

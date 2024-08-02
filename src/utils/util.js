@@ -55,7 +55,7 @@ function isFuture(startTime, endTime) {
 
 // 受け取ったデータをいくつ返すか決め、その分のデータを返す関数
 // 過去のデータは返さないようにする
-export function filterData(jsonData, maxDisplayedItems) {
+export function filterData(jsonData, maxDisplayedItems = 12) {
     let displayedItems = 0;
     const filteredData = [];
 
