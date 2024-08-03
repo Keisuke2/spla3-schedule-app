@@ -23,8 +23,8 @@ jobs:
       # 投稿内容を更新するために npm run build:posts を実行
       - name: Install dependencies
         run: npm install
-      - name: Build and deploy
-        run: npm run build && npm run deploy
+      - name: Build
+        run: npm run build
       - uses: amondnet/vercel-action@v20
         with:
           # GitHub Actions の Secrets で作成した値を参照する形で
