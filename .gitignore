@@ -32,3 +32,4 @@ yarn-error.log*
 certificates
 
 /src/components/Sample.jsx
+.vercel
