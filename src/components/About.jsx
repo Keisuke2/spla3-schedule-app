@@ -13,7 +13,6 @@ export default function About() {
 }
 
 function Header() {
-
     return (
         <>
             <Head prefix='og:http://ogp.me/ns#'>
@@ -86,6 +85,7 @@ function Main() {
             </section>
 
             <p className={styles.contact}>連絡・問い合わせは次のメールアドレスへお願いします。<br />inokei1704@gmail.com</p>
+            <p className={styles.contact}>当アプリの改善に向けたアンケートは<a href="https://forms.gle/nze5rtUqDhXM8sVd7" className={styles.link}>こちら</a>をクリック。</p>
         </div>
     );
 }
