@@ -31,14 +31,13 @@
 }
 
 .link {
-    color: #90caf9;
+    color: #31ccce;
     text-decoration: none;
     transition: color 0.3s ease, text-decoration 0.3s ease;
     font-weight: 500;
 }
 
 .link:hover {
-    color: #42a5f5;
     text-decoration: underline;
 }
 
@@ -55,10 +54,9 @@
 }
 
 .listItem::before {
-    content: '•';
+    content: '-';
     position: absolute;
     left: 0;
-    color: #90caf9;
 }
 
 .contact {

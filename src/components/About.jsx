@@ -61,9 +61,9 @@ function Main() {
                 <p className={styles.paragraph}>スマートフォンやタブレット、PCからアクセスできます。</p>
             </section>
 
-            <section>
+            <section className={styles.section}>
                 <h2 className={styles.sectionTitle}>今後のアップデートについて</h2>
-                <ul>
+                <ul className={styles.list}>
                     <li className={styles.listItem}>ビッグランのスケジュール追加予定</li>
                     <li className={styles.listItem}>バイトチームコンテストのスケジュール追加予定</li>
                     <li className={styles.listItem}>見やすいレイアウトに修正予定</li>
