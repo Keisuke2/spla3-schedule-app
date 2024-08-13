@@ -98,17 +98,15 @@ const TricolorBattle = ({ sch }) => {
                         <div className={styles.modeContainer}>
                             <div className={styles.modeItem}>
                                 <p className={styles.mode}>トリカラバトル</p>
-                                <p className={styles.rule}>ナワバリバトル</p>
+                                <p className={styles.rule}>{sch.rule.name}</p>
                             </div>
                         </div>
                     </div>
                     <div className={styles.stageContainer}>
-                        {sch.tricolor_stage.map((stage) => (
-                            <div key={stage.id} className={styles.stageItem}>
-                                <img className={styles.stageImage} src={stage.image} alt={stage.name} />
-                                <p className={styles.stageName}>{stage.name}</p>
-                            </div>
-                        ))}
+                        <div className={styles.stageItem}>
+                            <img className={styles.stageImage} src={sch.tricolor_stage.image} alt={sch.tricolor_stage.name} />
+                            <p className={styles.stageName}>{sch.tricolor_stage.name}</p>
+                        </div>
                     </div>
                 </div>
             </div>
