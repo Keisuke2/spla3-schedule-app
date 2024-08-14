@@ -1,34 +1,40 @@
 .tabs {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    /* ボタンを一列に並べる */
     background-color: #2a2a2a;
     padding: 15px 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: -webkit-sticky;
-    /* Safari対応 */
     position: sticky;
     top: 0;
     z-index: 1000;
-    /* 固定された要素が他の要素の背後に隠れないように */
 }
 
 .tab {
+    flex: 1;
+    /* 各ボタンが等しい幅を持つように */
     background-color: #3a3a3a;
     border: none;
     border-radius: 8px;
-    padding: 12px 24px;
+    padding: 12px 8px;
+    /* 左右のパディングを調整 */
+    margin: 0 4px;
+    /* ボタン間の間隔を調整 */
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 120px;
     font-weight: 600;
     color: #e0e0e0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .tab:hover {
@@ -46,21 +52,29 @@
     width: 24px;
     height: 24px;
     margin-right: 8px;
+    flex-shrink: 0;
+    /* アイコンのサイズを固定 */
 }
 
 .tab p {
     margin: 0;
     font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @media (max-width: 800px) {
     .tabs {
+        flex-wrap: wrap;
+        /* モバイル表示時は折り返す */
         padding: 10px;
     }
 
     .tab {
-        padding: 8px 16px;
-        min-width: auto;
+        flex-basis: calc(33.333% - 8px);
+        /* 3列表示 */
+        margin: 4px;
+        padding: 8px 4px;
     }
 
     .tab img {
