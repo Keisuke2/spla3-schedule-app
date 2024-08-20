@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ContentsContainer from "components/tabs/Contents";
+import ContentsContainer from "components/home/Contents";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import styles from "styles/Home.module.css";
 
