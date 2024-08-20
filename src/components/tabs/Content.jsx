@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from 'styles/Home.module.css';
 import { TabPanels, TabPanel } from '@headlessui/react';
-import RegularSchedule from 'components/Regular';
-import BankaraSchedule from 'components/Bankara';
-import XSchedule from 'components/X';
-import EventSchedule from 'components/Event';
-import FestSchedule from 'components/Fest';
-import SRunSchedule from 'components/SalmonRun';
+import RegularSchedule from 'components/home/Regular';
+import BankaraSchedule from 'components/home/Bankara';
+import XSchedule from 'components/home/X';
+import EventSchedule from 'components/home/Event';
+import FestSchedule from 'components/home/Fest';
+import SRunSchedule from 'components/home/SalmonRun';
 
 const TabContent = ({ children }) => {
     return <div className={styles.flex}>{children}</div>;

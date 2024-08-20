@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Analytics } from "@vercel/analytics/react"
 import styles from 'styles/Home.module.css';
 import { fetchData } from 'lib/api';
-import Header from 'components/Header';
-import Main from 'components/Main';
-import Footer from 'components/Footer';
+import Header from 'components/home/Header';
+import Main from 'components/home/Main';
+import Footer from 'components/home/Footer';
 
 export default function Home({ sch, festOpSch, salmonSch, error }) {
   return (

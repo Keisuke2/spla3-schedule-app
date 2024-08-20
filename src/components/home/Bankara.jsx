@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import PropTypes from "prop-types";
 import { formatDate, filterData } from "utils/util.js";
 import styles from "styles/Home.module.css";
-import { NoScheduleMessage, ErrorMessage } from "components/Message";
+import { NoScheduleMessage, ErrorMessage } from "components/home/Message";
 
 export default function BankaraSchedule({ sch, maxDisplayedItems }) {
     try {

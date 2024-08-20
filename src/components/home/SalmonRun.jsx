@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import PropTypes from "prop-types";
 import { filterData, formatDate } from "utils/util.js";
 import styles from "styles/Home.module.css";
-import { ErrorMessage } from "components/Message";
+import { ErrorMessage } from "components/home/Message";
 
 export default function SRunSchedule({ salmonSch }) {
     try {
