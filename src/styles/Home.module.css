@@ -405,3 +405,11 @@
     transform: translateX(-50%);
   }
 }
+
+@media (min-width: 500px) and (max-width: 800px) {
+  .scheduleItem {
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
