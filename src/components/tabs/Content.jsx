@@ -9,33 +9,33 @@ import EventContainer from 'components/home/schedule/Event';
 import FestContainer from 'components/home/schedule/Fest';
 import SalmonRunContainer from 'components/home/schedule/SalmonRun';
 
-const TabContent = ({ children }) => {
+const Schedule = ({ children }) => {
     return <div className={styles.flex}>{children}</div>;
 };
 
-TabContent.propTypes = {
+Schedule.propTypes = {
     children: PropTypes.node
 };
 
 const maxDisplayedItems = 12;
 
-const TabContents = ({ sch, festOpSch, salmonSch }) => {
+const ScheduleContainer = ({ sch, festOpSch, salmonSch }) => {
     return (
         <TabPanels>
-            <TabPanel><TabContent>{<RegularContainer sch={sch} maxDisplayedItems={maxDisplayedItems} />}</TabContent></TabPanel>
-            <TabPanel><TabContent>{<BankaraContainer sch={sch} maxDisplayedItems={maxDisplayedItems} />}</TabContent></TabPanel>
-            <TabPanel><TabContent>{<XContainer sch={sch} maxDisplayedItems={maxDisplayedItems} />}</TabContent></TabPanel>
-            <TabPanel><TabContent>{<EventContainer sch={sch} />}</TabContent></TabPanel>
-            <TabPanel><TabContent>{<FestContainer sch={sch} festOpSch={festOpSch} maxDisplayedItems={maxDisplayedItems} />}</TabContent></TabPanel>
-            <TabPanel><TabContent>{<SalmonRunContainer salmonSch={salmonSch} />}</TabContent></TabPanel>
+            <TabPanel><Schedule>{<RegularContainer sch={sch} maxDisplayedItems={maxDisplayedItems} />}</Schedule></TabPanel>
+            <TabPanel><Schedule>{<BankaraContainer sch={sch} maxDisplayedItems={maxDisplayedItems} />}</Schedule></TabPanel>
+            <TabPanel><Schedule>{<XContainer sch={sch} maxDisplayedItems={maxDisplayedItems} />}</Schedule></TabPanel>
+            <TabPanel><Schedule>{<EventContainer sch={sch} />}</Schedule></TabPanel>
+            <TabPanel><Schedule>{<FestContainer sch={sch} festOpSch={festOpSch} maxDisplayedItems={maxDisplayedItems} />}</Schedule></TabPanel>
+            <TabPanel><Schedule>{<SalmonRunContainer salmonSch={salmonSch} />}</Schedule></TabPanel>
         </TabPanels>
     );
 };
 
-TabContents.propTypes = {
+ScheduleContainer.propTypes = {
     sch: PropTypes.object.isRequired,
     festOpSch: PropTypes.object.isRequired,
     salmonSch: PropTypes.object.isRequired
 };
 
-export default TabContents;
+export default ScheduleContainer;
