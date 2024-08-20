@@ -4,7 +4,7 @@ import { filterData, formatDate } from "utils/util.js";
 import styles from "styles/Home.module.css";
 import { ErrorMessage } from "components/home/Message";
 
-export default function SRunSchedule({ salmonSch }) {
+export default function SalmonRunContainer({ salmonSch }) {
     try {
         const filteredSalmonSch = useMemo(() => {
             return filterData(salmonSch.results);
@@ -44,6 +44,6 @@ export default function SRunSchedule({ salmonSch }) {
     }
 }
 
-SRunSchedule.propTypes = {
+SalmonRunContainer.propTypes = {
     salmonSch: PropTypes.object.isRequired,
 };

@@ -4,7 +4,7 @@ import { formatDate, filterData } from "utils/util.js";
 import styles from "styles/Home.module.css";
 import { NoScheduleMessage, ErrorMessage } from "components/home/Message";
 
-export default function XSchedule({ sch, maxDisplayedItems }) {
+export default function XContainer({ sch, maxDisplayedItems }) {
     try {
         const filteredXSch = useMemo(() => {
             return filterData(sch.result.x, maxDisplayedItems);
@@ -46,7 +46,7 @@ export default function XSchedule({ sch, maxDisplayedItems }) {
     }
 }
 
-XSchedule.propTypes = {
+XContainer.propTypes = {
     sch: PropTypes.object.isRequired,
     maxDisplayedItems: PropTypes.number.isRequired,
 };

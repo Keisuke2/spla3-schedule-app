@@ -4,7 +4,7 @@ import { formatDate, filterData } from "utils/util.js"
 import styles from 'styles/Home.module.css';
 import { NoScheduleMessage, ErrorMessage } from "components/home/Message";
 
-export default function RegularSchedule({ sch, maxDisplayedItems }) {
+export default function RegularContainer({ sch, maxDisplayedItems }) {
     try {
         const filteredRegularSch = useMemo(() => {
             return filterData(sch.result.regular, maxDisplayedItems);
@@ -46,7 +46,7 @@ export default function RegularSchedule({ sch, maxDisplayedItems }) {
     }
 }
 
-RegularSchedule.propTypes = {
+RegularContainer.propTypes = {
     sch: PropTypes.object.isRequired,
     maxDisplayedItems: PropTypes.number.isRequired
 };
