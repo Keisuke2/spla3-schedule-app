@@ -4,7 +4,7 @@ import { formatDate, filterData } from "utils/util.js";
 import styles from "styles/Home.module.css";
 import { NoScheduleMessage, ErrorMessage } from "components/home/Message";
 
-export default function BankaraSchedule({ sch, maxDisplayedItems }) {
+export default function BankaraContainer({ sch, maxDisplayedItems }) {
     try {
         const filteredBankaraChSch = useMemo(() => {
             return filterData(sch.result.bankara_challenge, maxDisplayedItems);
@@ -40,7 +40,7 @@ export default function BankaraSchedule({ sch, maxDisplayedItems }) {
     }
 }
 
-BankaraSchedule.propTypes = {
+BankaraContainer.propTypes = {
     sch: PropTypes.object.isRequired,
     maxDisplayedItems: PropTypes.number.isRequired
 };

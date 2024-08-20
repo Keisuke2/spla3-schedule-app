@@ -4,7 +4,7 @@ import { formatDate, filterData } from "utils/util.js";
 import styles from "styles/Home.module.css";
 import { NoScheduleMessage, ErrorMessage } from "components/home/Message";
 
-export default function FestSchedule({ sch, festOpSch, maxDisplayedItems }) {
+export default function FestContainer({ sch, festOpSch, maxDisplayedItems }) {
     try {
         const filteredFestChSch = useMemo(() => {
             return filterData(sch.result.fest_challenge, maxDisplayedItems);
@@ -44,7 +44,7 @@ export default function FestSchedule({ sch, festOpSch, maxDisplayedItems }) {
     }
 }
 
-FestSchedule.propTypes = {
+FestContainer.propTypes = {
     sch: PropTypes.object.isRequired,
     festOpSch: PropTypes.object.isRequired,
     maxDisplayedItems: PropTypes.number.isRequired

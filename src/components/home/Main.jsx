@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import TabSchedule from "components/tabs/TabSchedule";
+import ContentsContainer from "components/tabs/Contents";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import styles from "styles/Home.module.css";
 
@@ -8,7 +8,7 @@ export default function Main({ sch, festOpSch, salmonSch, error }) {
     return (
         <main className={styles.main}>
             <h1 className={styles.title}>Splatoon3 スケジュール</h1>
-            <TabSchedule sch={sch} festOpSch={festOpSch} salmonSch={salmonSch} />
+            <ContentsContainer sch={sch} festOpSch={festOpSch} salmonSch={salmonSch} />
             <SpeedInsights />
             {error && <div className={styles.error}>{error}</div>}
         </main>

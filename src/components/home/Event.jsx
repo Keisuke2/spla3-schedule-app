@@ -4,7 +4,7 @@ import { formatDate } from "utils/util.js";
 import styles from "styles/Home.module.css";
 import { ErrorMessage } from "components/home/Message";
 
-export default function EventSchedule({ sch }) {
+export default function EventContainer({ sch }) {
     try {
         return (
             <div className={styles.eventContainer}>
@@ -45,6 +45,6 @@ export default function EventSchedule({ sch }) {
     }
 }
 
-EventSchedule.propTypes = {
+EventContainer.propTypes = {
     sch: PropTypes.object.isRequired,
 };
