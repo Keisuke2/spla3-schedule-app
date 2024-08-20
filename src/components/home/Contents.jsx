@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { TabGroup } from '@headlessui/react';
-import ScheduleContainer from 'components/tabs/Content';
-import BUttonContainer from 'components/tabs/Button';
+import ScheduleContainer from 'components/home/Schedule';
+import BUttonContainer from 'components/home/Button';
 
 const ContentsContainer = ({ sch, festOpSch, salmonSch }) => {
     return (
