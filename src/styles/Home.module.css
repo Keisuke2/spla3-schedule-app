@@ -113,14 +113,14 @@
 
 .mode {
   font-size: 0.9em;
-  margin-bottom: 4px;
+  margin: 0;
 }
 
 .rule {
   font-size: 0.9em;
   font-weight: bold;
   color: #ff9800;
-  margin-bottom: 8px;
+  margin: 0;
 }
 
 .regularContainer .stageContainer,
@@ -208,10 +208,11 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding: 0.6rem;
 }
 
 .modeItem {
-  padding: 8px;
+  padding: 0.6rem;
   background-color: #444242;
   border-radius: 4px;
 }
@@ -366,7 +367,7 @@
     display: flex;
     /* justify-content: center; */
     /* padding: 0 0 0 1rem; */
-    padding: 0;
+    padding: 0.2rem;
   }
 
   .mode {
