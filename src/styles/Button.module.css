@@ -1,4 +1,4 @@
-.tabs {
+.buttonContainer {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -7,14 +7,14 @@
     padding: 15px 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px #0000001a;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.tab {
+.button {
     flex: 1;
     /* 各ボタンが等しい幅を持つように */
     background-color: #3a3a3a;
@@ -37,18 +37,18 @@
     text-overflow: ellipsis;
 }
 
-.tab:hover {
+.button:hover {
     background-color: #4d4d4d;
     transform: translateY(-2px);
 }
 
-.tab.active {
+.button.active {
     background-color: #4caf50;
     color: #ffffff;
-    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+    box-shadow: 0 4px 8px #4caf504d;
 }
 
-.tab img {
+.buttonImage {
     width: 24px;
     height: 24px;
     margin-right: 8px;
@@ -56,7 +56,7 @@
     /* アイコンのサイズを固定 */
 }
 
-.tab p {
+.buttonName {
     margin: 0;
     font-size: 14px;
     overflow: hidden;
@@ -64,26 +64,26 @@
 }
 
 @media (max-width: 800px) {
-    .tabs {
+    .buttonContainer {
         flex-wrap: wrap;
         /* モバイル表示時は折り返す */
         padding: 10px;
     }
 
-    .tab {
+    .button {
         flex-basis: calc(33.333% - 8px);
         /* 3列表示 */
         margin: 4px;
         padding: 8px 4px;
     }
 
-    .tab img {
+    .buttonImage {
         width: 20px;
         height: 20px;
         margin-right: 4px;
     }
 
-    .tab p {
+    .buttonName {
         font-size: 12px;
     }
 }
