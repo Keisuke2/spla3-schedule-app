@@ -4,14 +4,14 @@ import styles from "styles/About.module.css";
 export default function Main() {
     return (
         <div className={styles.container}>
-            <p className={styles.lastUpdated}>最終更新日: 2024年8月13日</p>
+            <p className={styles.lastUpdated}>最終更新日: 2024年8月23日</p>
             <h1 className={styles.title}>About</h1>
 
             <section className={styles.section}>
                 <h2 className={styles.sectionTitle}>アプリについて</h2>
                 <p className={styles.paragraph}>これはスプラトゥーン3の最新スケジュール（レギュラーマッチ、バンカラマッチ、Xマッチ、イベントマッチ、フェスマッチ、サーモンラン）を確認できるWebアプリです。</p>
                 <p className={styles.paragraph}>スプラトゥーン3のあらゆるスケジュールを手軽に見れる方法はこれまでになかったので、このアプリを作成しました。</p>
-                <p className={styles.paragraph}>スマートフォンやタブレット、PCからアクセスできます。</p>
+                <p className={styles.paragraph}>スマートフォンやタブレット、PCからアクセスできますが、スマートフォンなどの縦長で幅が狭いデバイスを用いられる場合は、縦画面でご覧いただくことを推奨します。</p>
             </section>
 
             <section className={styles.section}>
@@ -35,6 +35,18 @@ export default function Main() {
                     <li className={styles.listItem}><a href="https://splatoonwiki.org/wiki/Challenge" className={styles.link}>イベントマッチのアイコン</a></li>
                     <li className={styles.listItem}><a href="https://splatoonwiki.org/wiki/Splatfest" className={styles.link}>フェスマッチのアイコン</a></li>
                     <li className={styles.listItem}><a href="https://splatoonwiki.org/wiki/Salmon_Run_(series)" className={styles.link}>サーモンランのアイコン</a></li>
+                </ul>
+            </section>
+
+            <section className={styles.section}>
+                <h2 className={styles.sectionTitle}>類似サイト</h2>
+                <p className={styles.paragraph}>スプラトゥーン3のスケジュールを確認できる他のサイトについては以下をクリック。</p>
+                <ul className={styles.list}>
+                    <li className={styles.listItem}><a href="https://splatoon.caxdb.com/" className={styles.link}>スプラトゥーン3 ステージ情報</a></li>
+                    <li className={styles.listItem}><a href="https://splatoon3.ink/" className={styles.link}>Splatoon 3</a></li>
+                    <li className={styles.listItem}><a href="https://supergomibako.com/tool/spla/schedule/" className={styles.link}>スプラ3 スケジュール</a></li>
+                    <li className={styles.listItem}><a href="https://splatoon.oatmealdome.me/three/versus" className={styles.link}>Splatoon3 - Battle Rotations</a></li>
+                    <li className={styles.listItem}><a href="https://spla3-stage-schedule.vercel.app/" className={styles.link}>Spla3 Stage Schedule</a></li>
                 </ul>
             </section>
 
